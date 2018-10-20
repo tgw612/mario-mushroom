@@ -14,7 +14,7 @@
       <module name="demo" target="1.8" />
       <module name="demo (1)" target="1.8" />
       <module name="demo (2)" target="1.8" />
-      <module name="jmockit" target="1.8" />
+      <module name="jmockit" target="1.5" />
       <module name="mario-mushroom" target="1.8" />
     </bytecodeTargetLevel>
   </component>
