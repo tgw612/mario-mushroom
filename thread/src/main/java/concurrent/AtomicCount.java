@@ -1,4 +1,4 @@
-package concurrentArt;
+package concurrent;
 
 
 import java.util.ArrayList;

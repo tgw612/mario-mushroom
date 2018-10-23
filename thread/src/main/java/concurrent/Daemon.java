@@ -1,4 +1,4 @@
-package concurrentArt;
+package concurrent;
 
 /**
  * Created by tgw61 on 2017/7/20.
