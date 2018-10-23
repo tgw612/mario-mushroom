@@ -12,20 +12,17 @@ package creazyjava.sync.syncMethod;
  * @version 1.0
  */
 public class Account {
-    // ��װ�˻���š��˻����������Ա����
     private String accountNo;
     private double balance;
 
     public Account() {
     }
 
-    // ������
     public Account(String accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
 
-    // accountNo��setter��getter����
     public void setAccountNo(String accountNo) {
         this.accountNo = accountNo;
     }
@@ -34,33 +31,27 @@ public class Account {
         return this.accountNo;
     }
 
-    // ����˻�����������޸ģ�����ֻΪbalance�ṩgetter������
     public double getBalance() {
         return this.balance;
     }
 
-    // �ṩһ���̰߳�ȫdraw()���������ȡǮ����
     public synchronized void draw(double drawAmount) {
-        // �˻�������ȡǮ��Ŀ
         if (balance >= drawAmount) {
-            // �³���Ʊ
             System.out.println(Thread.currentThread().getName()
-                    + "ȡǮ�ɹ����³���Ʊ:" + drawAmount);
+                    + "drawAmount:" + drawAmount);
             try {
                 Thread.sleep(1);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
-            // �޸����
             balance -= drawAmount;
-            System.out.println("\t���Ϊ: " + balance);
+            System.out.println("balance: " + balance);
         } else {
             System.out.println(Thread.currentThread().getName()
-                    + "ȡǮʧ�ܣ����㣡");
+                    + "thread name");
         }
     }
 
-    // ����������������accountNo����дhashCode()��equals()����
     public int hashCode() {
         return accountNo.hashCode();
     }
