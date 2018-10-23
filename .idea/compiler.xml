@@ -7,15 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jmockit" />
-        <module name="mario-mushroom" />
+        <module name="thread" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="1.8" />
       <module name="demo (1)" target="1.8" />
       <module name="demo (2)" target="1.8" />
-      <module name="jmockit" target="1.5" />
+      <module name="jmockit" target="1.8" />
       <module name="mario-mushroom" target="1.8" />
+      <module name="thread" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
