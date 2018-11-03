@@ -14,6 +14,7 @@
         <module>redis</module>
         <module>netty</module>
         <module>thread</module>
+        <module>design-pattern</module>
         <module>jvm</module>
         <!--<module>storm</module>-->
         <!--<module>mybatis</module>-->

@@ -18,7 +18,7 @@ public class ExecutorTest {
 //将 i 转化为  j，这样j 还是final类型的参与线程
             executor.execute(() -> {
                 try {
-                    System.out.println(j);
+                    System.out.println(Thread.currentThread().getName()+"---"+j);
                 } catch (Exception e) {
                 }
             });

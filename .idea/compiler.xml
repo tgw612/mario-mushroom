@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
+        <module name="designpattern" />
         <module name="jmockit" />
         <module name="jvm" />
         <module name="netty" />
@@ -14,16 +15,5 @@
         <module name="thread" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="demo" target="1.8" />
-      <module name="demo (1)" target="1.8" />
-      <module name="demo (2)" target="1.8" />
-      <module name="jmockit" target="1.8" />
-      <module name="jvm" target="1.8" />
-      <module name="mario-mushroom" target="1.8" />
-      <module name="netty" target="1.8" />
-      <module name="redis" target="1.8" />
-      <module name="thread" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

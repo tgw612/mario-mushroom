@@ -13,15 +13,15 @@ package creazyjava.company;
  */
 class A {
     public synchronized void foo(B b) {
-        System.out.println("????????: " + Thread.currentThread().getName()
-                + " ??????A?????foo()????");     // ??
+        System.out.println("B: " + Thread.currentThread().getName()
+                + "foo()");
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        System.out.println("????????: " + Thread.currentThread().getName()
-                + " ???????B?????last()????");    // ??
+        System.out.println("B: " + Thread.currentThread().getName()
+                + " B--last()");
         b.last();
     }
 
@@ -32,8 +32,8 @@ class A {
 
 class B {
     public synchronized void bar(A a) {
-        System.out.println("????????: " + Thread.currentThread().getName()
-                + " ??????B?????bar()????");   // ??
+        System.out.println("A: " + Thread.currentThread().getName()
+                + "B--bar()");   // ??
         try {
             Thread.sleep(200);
         } catch (InterruptedException ex) {
@@ -45,33 +45,28 @@ class B {
     }
 
     public synchronized void last() {
-        System.out.println("??????B???last()???????");
+        System.out.println("B--last()");
     }
 }
 
 public class DeadLock implements Runnable {
     A a = new A();
     B b = new B();
-
     public void init() {
         Thread.currentThread().setName("?????");
-        // ????a?????foo????
         a.foo(b);
         System.out.println("??????????????");
     }
 
     public void run() {
         Thread.currentThread().setName("?????");
-        // ????b?????bar????
         b.bar(a);
         System.out.println("?????????????");
     }
 
     public static void main(String[] args) {
         DeadLock dl = new DeadLock();
-        // ??dl?target?????????
         new Thread(dl).start();
-        // ????init()????
         dl.init();
     }
 }
