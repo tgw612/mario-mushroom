@@ -17,8 +17,9 @@
         <module>design-pattern</module>
         <module>jvm</module>
         <module>mybatis</module>
+        <module>aop</module>
+        <module>security</module>
         <!--<module>storm</module>-->
-        <!--<module>mybatis</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
         <!--<module>rocketmq</module>-->
@@ -40,6 +41,7 @@
 
 
 
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -57,6 +59,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
             <dependency>
@@ -159,6 +166,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.36</version>
         </dependency>
     </dependencies>
     <build>
