@@ -16,6 +16,7 @@
         <module>thread</module>
         <module>design-pattern</module>
         <module>jvm</module>
+        <module>mybatis</module>
         <!--<module>storm</module>-->
         <!--<module>mybatis</module>-->
         <!--<module>hbase</module>-->
