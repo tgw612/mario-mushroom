@@ -1,11 +1,10 @@
-# [《自己动手写Java虚拟机》][jd] 源代码
+《自己动手写Java虚拟机》
 
-[![Build Status](https://travis-ci.org/zxh0/jvmgo-book.svg?branch=master)](https://travis-ci.org/zxh0/jvmgo-book)
 
-![jvm.go Logo][logo]
-
-* [✎ 勘误表](v1/errata.md)
-* [☺ 购买][jd]
-
-[logo]: https://raw.githubusercontent.com/zxh0/jvmgo-book/master/v1/gophers/cover.png
-[jd]: https://item.jd.com/11935272.html
+java的四种引用
+强引用(Strong Reference):对象是强引用的时候,即使jvm内存空间不足,GC也不会回收该对象,当满时,报OutOfMemoryError异常
+软引用(Soft Reference):JVM内存不足时,会回收软引用,其引用可以关联一个引用队列(需要在一个对象的可达性(是否已被GC回收)发生变化时得到通知,
+引用队列就是用于收集这些信息的队列)
+弱引用(weak Reference):只被弱引用所指向的对象的生命周期是两次GC之间,而只被软引用所指向的对象可以经历多次GC,直到出现内存紧张的情况才会被回收,如weakHashMap
+幽灵引用(Phantom Reference):又叫虚引用,创建虚引用则必须指定一个引用队列,当GC准备回收一个对象时如果发现还有虚引用,则会在回收对象的内存之前,
+把虚引用加入到关联的引用队列中.之后码农可做一个跟踪,用于比较精细的内存使用控制

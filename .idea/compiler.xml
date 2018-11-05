@@ -15,6 +15,7 @@
         <module name="netty" />
         <module name="redis" />
         <module name="security" />
+        <module name="sql" />
         <module name="thread" />
       </profile>
     </annotationProcessing>

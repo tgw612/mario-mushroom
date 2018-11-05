@@ -19,6 +19,7 @@
         <module>mybatis</module>
         <module>aop</module>
         <module>security</module>
+        <module>sql</module>
         <!--<module>storm</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
@@ -26,7 +27,6 @@
         <!--<module>memcache</module>-->
         <!--<module>easypoi</module>-->
         <!--<module>transattional</module>-->
-        <!--<module>security</module>-->
         <!--<module>dubbo</module>-->
         <!--<module>zookeeper</module>-->
         <!--<module>akka</module>-->
@@ -37,7 +37,7 @@
         <!--<module>framework</module>-->
         <!--<module>websocket</module>-->
         <!--<module>serializable</module>-->
-        <!--<module>rpc</module>-->
+        <!--<module>http</module>-->
 
 
 
