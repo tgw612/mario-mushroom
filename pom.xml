@@ -21,6 +21,7 @@
         <module>security</module>
         <module>sql</module>
         <!--<module>storm</module>-->
+        <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
         <!--<module>rocketmq</module>-->
