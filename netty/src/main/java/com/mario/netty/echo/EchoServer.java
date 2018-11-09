@@ -21,7 +21,7 @@ public class EchoServer {
         if (args.length != 1) {
             System.out.println("usage:" + EchoServer.class.getSimpleName() + "<port>");
         }
-        int port = Integer.parseInt(args[0]);
+        int port = 7998;//Integer.parseInt(args[0]);
         new EchoServer(port).start();
     }
 
