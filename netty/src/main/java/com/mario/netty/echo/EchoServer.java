@@ -28,7 +28,7 @@ public class EchoServer {
     private void start() {
         final EchoServerHandler serverHandler = new EchoServerHandler();
         ServerBootstrap b = new ServerBootstrap();
-        NioEventLoopGroup group = new NioEventLoopGroup();
+        EventLoopGroup group = new NioEventLoopGroup();
         try {
             b.group(group)
                     .channel(NioServerSocketChannel.class)
