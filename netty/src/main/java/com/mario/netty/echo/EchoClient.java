@@ -31,8 +31,7 @@ public class EchoClient {
                             ch.pipeline().addLast(new EchoClientHandler());
                         }
                     });
-            ChannelFuture f = null;
-            f = b.connect().sync();
+            ChannelFuture f = b.connect().sync();
             f.channel().closeFuture().sync();
         } finally {
             group.shutdownGracefully().sync();
