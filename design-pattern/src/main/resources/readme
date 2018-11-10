@@ -27,3 +27,8 @@ system(也可称为application) classloader:从classpath环境变量中加载类
 一个算法分为多个步骤,而这些步骤的执行次序成为一个模板方法.
 
 --策略模式
+
+
+--责任链模式
+将实现逻辑拆分到多个只包含部分逻辑的功能单一的handler处理类中,码农可以根据业务需求组合不同的handler
+在一条责任链中,每个Handler对象都包含对下一个handler对象的引用,一个Handler对象处理完请求消息,会把请求传给下一个handler对象继续处理.

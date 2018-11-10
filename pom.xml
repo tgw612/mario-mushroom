@@ -20,7 +20,7 @@
         <module>aop</module>
         <module>security</module>
         <module>sql</module>
-        <module>cap</module>
+        <module>transactional</module>
         <!--<module>storm</module>-->
         <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
