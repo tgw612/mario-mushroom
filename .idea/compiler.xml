@@ -9,6 +9,7 @@
         <module name="aop" />
         <module name="cap" />
         <module name="demo" />
+        <module name="design-pattern" />
         <module name="designpattern" />
         <module name="jmockit" />
         <module name="jvm" />
@@ -20,5 +21,15 @@
         <module name="thread" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cap" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="design-pattern" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="netty" target="1.8" />
+      <module name="redis" target="1.8" />
+      <module name="security" target="1.8" />
+      <module name="sql" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
