@@ -25,6 +25,7 @@
         <module>algorithm</module>
         <module>sharding</module>
         <module>rpc</module>
+        <module>cap</module>
         <!--<module>storm</module>-->
         <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
