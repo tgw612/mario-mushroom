@@ -23,6 +23,8 @@
         <module>transactional</module>
         <module>linux</module>
         <module>algorithm</module>
+        <module>sharding</module>
+        <module>rpc</module>
         <!--<module>storm</module>-->
         <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
@@ -33,7 +35,6 @@
         <!--<module>dubbo</module>-->
         <!--<module>zookeeper</module>-->
         <!--<module>akka</module>-->
-        <!--<module>juc</module>-->
         <!--<module>spi</module>-->
         <!--<module>spring</module>-->
         <!--<module>framework</module>-->

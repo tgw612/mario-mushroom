@@ -17,7 +17,9 @@
         <module name="mybatis" />
         <module name="netty" />
         <module name="redis" />
+        <module name="rpc" />
         <module name="security" />
+        <module name="sharding" />
         <module name="sql" />
         <module name="thread" />
         <module name="transactional" />
@@ -37,7 +39,9 @@
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="redis" target="1.8" />
+      <module name="rpc" target="1.8" />
       <module name="security" target="1.8" />
+      <module name="sharding" target="1.8" />
       <module name="sql" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
