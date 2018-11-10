@@ -36,15 +36,10 @@
         <!--<module>juc</module>-->
         <!--<module>spi</module>-->
         <!--<module>spring</module>-->
-        <!--<module>algorithm</module>-->
         <!--<module>framework</module>-->
         <!--<module>websocket</module>-->
         <!--<module>serializable</module>-->
         <!--<module>http</module>-->
-
-
-
-
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -85,6 +80,11 @@
                 <version>${springboot.version}</version>
             </dependency>
             <!-- Log4j2 异步支持 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>5.0.4.RELEASE</version>
+            </dependency>
             <dependency>
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>

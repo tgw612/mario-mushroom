@@ -7,11 +7,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/aop/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/aop/pom.xml" />
         <option value="$PROJECT_DIR$/cap/pom.xml" />
         <option value="$PROJECT_DIR$/jmockit/pom.xml" />
         <option value="$PROJECT_DIR$/jvm/pom.xml" />
