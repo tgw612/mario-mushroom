@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="algorithm" />
         <module name="aop" />
         <module name="demo" />
         <module name="design-pattern" />
         <module name="designpattern" />
         <module name="jmockit" />
         <module name="jvm" />
+        <module name="linux" />
         <module name="mybatis" />
         <module name="netty" />
         <module name="redis" />
@@ -22,6 +24,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="algorithm" target="1.8" />
       <module name="aop" target="1.8" />
       <module name="cap" target="1.8" />
       <module name="demo" target="1.8" />
@@ -29,6 +32,7 @@
       <module name="designpattern" target="1.8" />
       <module name="jmockit" target="1.8" />
       <module name="jvm" target="1.8" />
+      <module name="linux" target="1.8" />
       <module name="mushroom" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
