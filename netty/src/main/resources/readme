@@ -2,7 +2,6 @@
 <netty实战>(较好)
 <netty权威指南>
 
-
 https://blog.csdn.net/qq_39658819/article/details/79389528
 Netty4的beta3加了AIO了，但是到beta9又被去了，作者的意思是测试下来AIO性能不如NIO，所以没必要用。我认为也没必要，在linux上NIO的实现本身就是epoll，
 使用jdk的AIO没有意义，在windows上jdk的AIO实现是IOCP，这种情况下使用AIO是比poll的性能高的，但是netty的服务器一般是在linux上，
