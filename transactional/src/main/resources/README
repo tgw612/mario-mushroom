@@ -10,17 +10,39 @@ dbms采用数据库锁机制保证事务的隔离性,当多个事务试图对相
 幻读:A事务读取B事务提交的新增数据(注意是新增而不是更改),导致事务提交前后,对数据的读取产生不一致的问题
 幻读指的其他已提交事务新增的数据,不可重复读是指已提交事务更新和删除的数据,对此的防范策略是不同的,防止读到更改数据,只需添加行级锁;而防止读到新增数据,
 则需要添加表级锁.(oracle则用的多版本数据实现)
+第一丢失更新:A事务回滚后,把B事务的更新数据覆盖了
+第二丢失更新:A事务覆盖B事务已经提交的数据,造成B事务所做操作丢失;即没有volatite特性,造成其中一个线程事务提交数据修改,其他线程不知道
+
+数据库锁机制
+行共享锁定
+行独占锁定
+表共享锁定
+表共享行独占锁定
+表独占锁定
+
+事务隔离级别
+read uncommited
+read committed
+repeatable read(推荐)
+serializable 并发性最低 但最安全
+
+各数据库支持的事务以及隔离级别都不同,用户可通过Connection#getMetaData()方法获取databaseMetaData对象,并通过该对象的supportsTransactions()
+supportTransactionIsolationLevel(int level)查看底层数据库的事务支持
 
 
+ThreadLocal
+spring的大多bean都是sinleton,对RequestContextHolder,TransactionSynchronizationManager.LocalContestHolder中的非线程安全的状态性对象
+采用threadLocal进行封装,让它们也成为线程安全而状态型对象
 
-事务属性
+但数据源的情况下,spring直接使用底层的数据源管理事务,多数据源则引用应用服务器中得JNDI资源完成JTA事务
+Java事务的类型有三种：JDBC事务、JTA(Java Transaction API)事务、容器事务。 常见的容器事务如Spring事务，容器事务主要是J2EE应用服务器提供的，
+容器事务大多是基于JTA完成，这是一个基于JNDI的，相当复杂的API实现。
 
-
-
-ThreadLocal的工作机制
-
-
-
+JTA事务即分布式事务
+要想使用用 JTA 事务，那么就需要有一个实现 javax.sql.XADataSource 、 javax.sql.XAConnection 和 javax.sql.XAResource 接口的 JDBC 驱动程序。
+一个实现了这些接口的驱动程序将可以参与 JTA 事务。一个 XADataSource 对象就是一个 XAConnection 对象的工厂。XAConnection 是参与 JTA 事务的 JDBC 连接。
+要使用JTA事务，必须使用XADataSource来产生数据库连接，产生的连接为一个XA连接。
+XA连接（javax.sql.XAConnection）和非XA（java.sql.Connection）连接的区别在于：XA可以参与JTA的事务，而且不支持自动提交。
 
 分布式一致性
 
