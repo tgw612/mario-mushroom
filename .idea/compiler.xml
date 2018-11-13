@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="algorithm" />
         <module name="aop" />
+        <module name="cap" />
         <module name="demo" />
         <module name="design-pattern" />
         <module name="designpattern" />

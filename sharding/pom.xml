@@ -12,4 +12,11 @@
     <artifactId>sharding</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>io.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
