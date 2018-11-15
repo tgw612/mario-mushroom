@@ -35,7 +35,7 @@ PROPAGATION_NOT_SUPPORTED:以非事务方式执行操作,如果当前存在事�
 PROPAGATION_NEVER:以非事务方式执行,如果当前存在事务,则抛出异常
 PROPAGATION_NESTED:如果当前存在事务,则在嵌套事务内执行,如果当前没有事务,则执行与PROPAGATION_REQUIRED类似
 
-
+只读事务:从这一点设置的时间点开始（时间点a）到这个事务结束的过程中，其他事务所提交的数据，该事务将看不见！
 事务同步管理器
 
 各数据库支持的事务以及隔离级别都不同,用户可通过Connection#getMetaData()方法获取databaseMetaData对象,并通过该对象的supportsTransactions()
@@ -55,6 +55,22 @@ JTA事务即分布式事务
 一个实现了这些接口的驱动程序将可以参与 JTA 事务。一个 XADataSource 对象就是一个 XAConnection 对象的工厂。XAConnection 是参与 JTA 事务的 JDBC 连接。
 要使用JTA事务，必须使用XADataSource来产生数据库连接，产生的连接为一个XA连接。
 XA连接（javax.sql.XAConnection）和非XA（java.sql.Connection）连接的区别在于：XA可以参与JTA的事务，而且不支持自动提交。
+
+难点剖析
+DAO,应用分层和事务管理的关系
+事务方法嵌套调用的分析
+多线程下事务方法的调用问题
+多种数据访问技术的问题
+spring AOP事务增强有哪些限制
+数据连接泄露的原因及规避
+
+spring事务传播机制,统一在TransactionDefinition类中描述,类中有几个重要的方法:事务的传播行为,事务的隔离级别,事务过期时间,事务读写特性
+互相嵌套的服务方法,事务共用一个.如果方法在不同的线程中,则不同的线程下得事务的方法工作在独立的事务中
+
+不能被spring aop 事务增强的:
+基于jdk proxy 不能被事务增强的方法:除了public的其他所有方法,此外,public static也不能被增强
+基于CGlib的动态代理,不能被事务增强的方法:private,static,final方法
+但是可以由事务传播引入事务
 
 分布式一致性
 
