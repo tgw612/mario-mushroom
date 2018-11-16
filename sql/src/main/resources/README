@@ -122,6 +122,9 @@ thread_cache_size：保存当前没有与连接关联但是准备为后面新的
 
 table_cache：类似于 thread_cache _size，但用来缓存表文件，对 InnoDB 效果不大，主要用于 MyISAM。
 
+querycachesize
+缓存MySQL中的ResultSet，也就是一条SQL语句执行的结果集，所以仅仅只能针对select语句。当某个表的数据有任何任何变化，都会导致所有引用了该表的select语句在Query Cache中的缓存数据失效。所以，当我们的数据变化非常频繁的情况下，使用Query Cache可能会得不偿失。根据命中率(Qcachehits/(Qcachehits+Qcache_inserts)*100))进行调整，一般不建议太大，256MB可能已经差不多了，大型的配置型静态数据可适当调大.
+可以通过命令show status like 'Qcache_%'查看目前系统Query catch使用大小
 
 升级硬件
 Scale Up，这个不多说了，根据 MySQL 是 CPU 密集型还是 I/O 密集型，通过提升 CPU 和内存、使用 SSD，都能显著提升 MySQL 性能。
