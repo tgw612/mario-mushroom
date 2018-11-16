@@ -1,3 +1,8 @@
+MYSQL内核
+https://mp.weixin.qq.com/s/tmkRAmc1M_Y23ynduBeP3Q
+
+mysql索引优化:
+https://mp.weixin.qq.com/s/KL7tzwwaPvO6NJBJmfUA1A
 orm层优化
 1.通过mybatis日志寻找慢查询,sql优化,创建索引
 2.创建缓存,读写分离
@@ -330,7 +335,7 @@ NoSQL
 非结构化或弱结构化数据
 对事务要求不强，且无太多关联操作的数据
 
-mysql索引优化:https://mp.weixin.qq.com/s/KL7tzwwaPvO6NJBJmfUA1A
+
 哪些情况需要创建索引?
 主键自动建立唯一索引
 频繁作为查询条件的字段

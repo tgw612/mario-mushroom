@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/designpattern.iml" filepath="$PROJECT_DIR$/design-pattern/designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk/jdk.iml" filepath="$PROJECT_DIR$/jdk/jdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/jmockit/jmockit.iml" filepath="$PROJECT_DIR$/jmockit/jmockit.iml" />
       <module fileurl="file://$PROJECT_DIR$/jvm/jvm.iml" filepath="$PROJECT_DIR$/jvm/jvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/linux/linux.iml" filepath="$PROJECT_DIR$/linux/linux.iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/rpc/rpc.iml" filepath="$PROJECT_DIR$/rpc/rpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharding/sharding.iml" filepath="$PROJECT_DIR$/sharding/sharding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/sql/sql.iml" filepath="$PROJECT_DIR$/sql/sql.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/transactional/transactional.iml" filepath="$PROJECT_DIR$/transactional/transactional.iml" />

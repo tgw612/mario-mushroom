@@ -27,8 +27,9 @@
         <module>rpc</module>
         <module>cap</module>
         <module>docker</module>
+        <module>spring</module>
+        <module>jdk</module>
         <!--<module>storm</module>-->
-        <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
         <!--<module>rocketmq</module>-->
@@ -38,8 +39,6 @@
         <!--<module>zookeeper</module>-->
         <!--<module>akka</module>-->
         <!--<module>spi</module>-->
-        <!--<module>spring</module>-->
-        <!--<module>framework</module>-->
         <!--<module>websocket</module>-->
         <!--<module>serializable</module>-->
         <!--<module>http</module>-->
