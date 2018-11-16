@@ -1,6 +1,8 @@
 <深入理解java虚拟机>
 《自己动手写Java虚拟机》
 
+JVM调优专栏
+https://mp.weixin.qq.com/s/01vNcW2Ubsvkp1OULKpPkg
 
 java的四种引用
 强引用(Strong Reference):对象是强引用的时候,即使jvm内存空间不足,GC也不会回收该对象,当满时,报OutOfMemoryError异常
