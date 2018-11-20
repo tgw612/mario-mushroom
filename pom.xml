@@ -29,6 +29,7 @@
         <module>docker</module>
         <module>spring</module>
         <module>jdk</module>
+        <module>rocketmq</module>
         <!--<module>storm</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->

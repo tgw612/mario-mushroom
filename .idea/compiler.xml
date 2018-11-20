@@ -20,6 +20,7 @@
         <module name="mybatis" />
         <module name="netty" />
         <module name="redis" />
+        <module name="rocketmq" />
         <module name="rpc" />
         <module name="security" />
         <module name="sharding" />
@@ -45,6 +46,7 @@
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="redis" target="1.8" />
+      <module name="rocketmq" target="1.8" />
       <module name="rpc" target="1.8" />
       <module name="security" target="1.8" />
       <module name="sharding" target="1.8" />
