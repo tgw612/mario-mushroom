@@ -1,4 +1,4 @@
-package concurrent;
+package com.mario.juc;
 
 /**
  * Created by tgw61 on 2017/7/20.

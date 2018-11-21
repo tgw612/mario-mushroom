@@ -20,30 +20,31 @@
         <module>aop</module>
         <module>security</module>
         <module>sql</module>
+        <module>transactional</module>
+        <module>linux</module>
+        <module>algorithm</module>
+        <module>sharding</module>
+        <module>rpc</module>
         <module>cap</module>
+        <module>docker</module>
+        <module>spring</module>
+        <module>jdk</module>
+        <module>rocketmq</module>
+        <module>kafka</module>
+        <module>rabbitmq</module>
         <!--<module>storm</module>-->
-        <!--<module>jdk</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
         <!--<module>rocketmq</module>-->
         <!--<module>memcache</module>-->
         <!--<module>easypoi</module>-->
-        <!--<module>transattional</module>-->
         <!--<module>dubbo</module>-->
         <!--<module>zookeeper</module>-->
         <!--<module>akka</module>-->
-        <!--<module>juc</module>-->
         <!--<module>spi</module>-->
-        <!--<module>spring</module>-->
-        <!--<module>algorithm</module>-->
-        <!--<module>framework</module>-->
         <!--<module>websocket</module>-->
         <!--<module>serializable</module>-->
         <!--<module>http</module>-->
-
-
-
-
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -84,6 +85,11 @@
                 <version>${springboot.version}</version>
             </dependency>
             <!-- Log4j2 异步支持 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>5.0.4.RELEASE</version>
+            </dependency>
             <dependency>
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
@@ -156,6 +162,12 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

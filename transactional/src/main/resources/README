@@ -1,0 +1,91 @@
+数据库事务ACID:atomic,consistency,isolation,durability
+隔离性:在并发的操作下,不同的事务拥有各自的数据空间,(threadlocal),它们的操作不会对对方产品干扰.因此有不同的干扰级别,隔离级别越高,数据一致性越好,并发性越弱.
+持久性:事务一旦提交,事务中得所有数据操作都必须持久化到db中.
+一般采用重执行日志来保证原子性,一致性,持久性.重执行日志记录了数据库变化的每个动作.
+dbms采用数据库锁机制保证事务的隔离性,当多个事务试图对相同的数据进行操作时,只有持有锁的事务才能操作数据.oracle还有数据版本机制,每个版本的读取则不影响了
+
+并发问题如果没有相应的隔离机制就会破坏数据完整性,包括三类读问题(脏读,不可重复读,幻读)和两类数据更新问题(第一类丢失更新,第二类丢失更新)
+脏读:A事务读取B事务尚未提交的更改数据,如果B事务回滚,则A事务读到错误数据
+不可重复读:不可重复读是指A事务读取B事务已经提交的更改数据,则在事务提交前后,A读取相同数据不同的问题.
+幻读:A事务读取B事务提交的新增数据(注意是新增而不是更改),导致事务提交前后,对数据的读取产生不一致的问题
+幻读指的其他已提交事务新增的数据,不可重复读是指已提交事务更新和删除的数据,对此的防范策略是不同的,防止读到更改数据,只需添加行级锁;而防止读到新增数据,
+则需要添加表级锁.(oracle则用的多版本数据实现)
+第一丢失更新:A事务回滚后,把B事务的更新数据覆盖了
+第二丢失更新:A事务覆盖B事务已经提交的数据,造成B事务所做操作丢失;即没有volatite特性,造成其中一个线程事务提交数据修改,其他线程不知道
+
+数据库锁机制
+行共享锁定
+行独占锁定
+表共享锁定
+表共享行独占锁定
+表独占锁定
+
+事务隔离级别
+read uncommited
+read committed
+repeatable read(推荐)
+serializable 并发性最低 但最安全
+
+事务的传播类型
+PROPAGATION_REQUIRED:如果当前没有事务,则新建一个事务,如果已存在事务,则加入到这个事务中
+PROPAGATION_SUPPORTS:支持当前事务,如果当前没有事务,则以非事务方式执行
+PROPAGATION_MANDATORY:使用当前事务,如果没有事务,则抛出异常
+PROPAGATION_REQUIRES_NEW:新建事务,如果当前存在事务,则当前事务挂起
+PROPAGATION_NOT_SUPPORTED:以非事务方式执行操作,如果当前存在事务,则挂起
+PROPAGATION_NEVER:以非事务方式执行,如果当前存在事务,则抛出异常
+PROPAGATION_NESTED:如果当前存在事务,则在嵌套事务内执行,如果当前没有事务,则执行与PROPAGATION_REQUIRED类似
+
+只读事务:从这一点设置的时间点开始（时间点a）到这个事务结束的过程中，其他事务所提交的数据，该事务将看不见！
+事务同步管理器
+
+各数据库支持的事务以及隔离级别都不同,用户可通过Connection#getMetaData()方法获取databaseMetaData对象,并通过该对象的supportsTransactions()
+supportTransactionIsolationLevel(int level)查看底层数据库的事务支持
+
+
+ThreadLocal
+spring的大多bean都是sinleton,对RequestContextHolder,TransactionSynchronizationManager.LocalContestHolder中的非线程安全的状态性对象
+采用threadLocal进行封装,让它们也成为线程安全而状态型对象
+
+但数据源的情况下,spring直接使用底层的数据源管理事务,多数据源则引用应用服务器中得JNDI资源完成JTA事务
+Java事务的类型有三种：JDBC事务、JTA(Java Transaction API)事务、容器事务。 常见的容器事务如Spring事务，容器事务主要是J2EE应用服务器提供的，
+容器事务大多是基于JTA完成，这是一个基于JNDI的，相当复杂的API实现。
+
+JTA事务即分布式事务
+要想使用用 JTA 事务，那么就需要有一个实现 javax.sql.XADataSource 、 javax.sql.XAConnection 和 javax.sql.XAResource 接口的 JDBC 驱动程序。
+一个实现了这些接口的驱动程序将可以参与 JTA 事务。一个 XADataSource 对象就是一个 XAConnection 对象的工厂。XAConnection 是参与 JTA 事务的 JDBC 连接。
+要使用JTA事务，必须使用XADataSource来产生数据库连接，产生的连接为一个XA连接。
+XA连接（javax.sql.XAConnection）和非XA（java.sql.Connection）连接的区别在于：XA可以参与JTA的事务，而且不支持自动提交。
+
+难点剖析
+DAO,应用分层和事务管理的关系
+事务方法嵌套调用的分析
+多线程下事务方法的调用问题
+多种数据访问技术的问题
+spring AOP事务增强有哪些限制
+数据连接泄露的原因及规避
+
+spring事务传播机制,统一在TransactionDefinition类中描述,类中有几个重要的方法:事务的传播行为,事务的隔离级别,事务过期时间,事务读写特性
+互相嵌套的服务方法,事务共用一个.如果方法在不同的线程中,则不同的线程下得事务的方法工作在独立的事务中
+
+不能被spring aop 事务增强的:
+基于jdk proxy 不能被事务增强的方法:除了public的其他所有方法,此外,public static也不能被增强
+基于CGlib的动态代理,不能被事务增强的方法:private,static,final方法
+但是可以由事务传播引入事务
+
+异步try..catch..可能捕获不到异步抛出的异 常,因为main走完后,异步才可能异常
+异步的事务是可能实现的,主要针对于数据库
+
+
+
+
+分布式一致性
+
+raft算法
+问其他人,是否选自己,如果票数过半,则提交
+paxos算法:
+有一个预提交,并且每次接受到得信息如果时间晚与手上的则丢弃,如果新于自己则替换手上的成为最新,最终预提交,是否提交,真提交则选出最终结果
+
+节点数必须为单数
+
+BASE理论  基本可用 柔性状态 最终一致性
+

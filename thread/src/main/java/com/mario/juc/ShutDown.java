@@ -1,4 +1,4 @@
-package concurrent;
+package com.mario.juc;
 
 
 import java.util.concurrent.TimeUnit;

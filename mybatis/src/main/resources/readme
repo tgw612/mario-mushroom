@@ -1,13 +1,31 @@
 <mybatis从入门到精通>
-<mybatis技术内幕>
-
-orm层优化
-1.通过mybatis日志寻找慢查询,sql优化,创建索引
-2.创建缓存
-3.垂直分表,水平分表
-4.读写分离
+<mybatis技术内幕>(非常好)
+简书
+https://www.jianshu.com/p/ec40a82cae28
 
 
-接口层:sqlSession
+接口层:数据的CRUD; 接口的调用方式:基于StatementID 基于Mapper接口;sqlSession
 核心处理层:配置解析,参数映射,sql解析,sql执行,结果集映射,插件
 基础支持层:数据源模块,事务管理模块,缓存模块,Binding模块,反射模块,类型转换模块,日志模块,资源加载,解析器模块
+
+JDBC
+加载JDBC驱动->建立并获取数据库连接->创建JDBC statements对象->设置Sql语句的传入参数->执行Sql并获得查询结果->对查询结果进行转换处理并返回
+->释放相关资源(Connection,关闭Statement,关闭ResultSet)
+MyBatis
+SqlSessionFactoryBuilder->SqlSessionFactory->SqlSession->Mapper
+核心构件
+SqlSession：作为MyBatis工作的主要顶层API，表示和数据库交互的会话，完成必要数据库增删改查功能；
+Executor：MyBatis执行器，是MyBatis 调度的核心，负责SQL语句的生成和查询缓存的维护；
+StatementHandler：封装了JDBC Statement操作，负责对JDBC statement 的操作，如设置参数、将Statement结果集转换成List集合。
+ParameterHandler：负责对用户传递的参数转换成JDBC Statement 所需要的参数；
+ResultSetHandler：负责将JDBC返回的ResultSet结果集对象转换成List类型的集合；
+TypeHandler：负责java数据类型和jdbc数据类型之间的映射和转换；
+MappedStatement：MappedStatement维护了一条<select|update|delete|insert>节点的封装；
+SqlSource：负责根据用户传递的parameterObject，动态地生成SQL语句，将信息封装到BoundSql对象中，并返回；
+BoundSql：表示动态生成的SQL语句以及相应的参数信息；
+Configuration：MyBatis所有的配置信息都维持在Configuration对象之中；
+
+
+mybatis插件
+白名单黑名单/shard/主键生成策略 如snowflake算法
+比如like %% 无法使用索引
