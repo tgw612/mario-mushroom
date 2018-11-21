@@ -16,9 +16,11 @@
         <module name="jdk" />
         <module name="jmockit" />
         <module name="jvm" />
+        <module name="kafka" />
         <module name="linux" />
         <module name="mybatis" />
         <module name="netty" />
+        <module name="rabbitmq" />
         <module name="redis" />
         <module name="rocketmq" />
         <module name="rpc" />
@@ -41,10 +43,12 @@
       <module name="jdk" target="1.8" />
       <module name="jmockit" target="1.8" />
       <module name="jvm" target="1.8" />
+      <module name="kafka" target="1.8" />
       <module name="linux" target="1.8" />
       <module name="mushroom" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="rabbitmq" target="1.8" />
       <module name="redis" target="1.8" />
       <module name="rocketmq" target="1.8" />
       <module name="rpc" target="1.8" />

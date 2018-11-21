@@ -30,6 +30,8 @@
         <module>spring</module>
         <module>jdk</module>
         <module>rocketmq</module>
+        <module>kafka</module>
+        <module>rabbitmq</module>
         <!--<module>storm</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->
