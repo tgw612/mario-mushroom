@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/cap/cap.iml" filepath="$PROJECT_DIR$/cap/cap.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/design-pattern/designpattern.iml" filepath="$PROJECT_DIR$/design-pattern/designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk/jdk.iml" filepath="$PROJECT_DIR$/jdk/jdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/jmockit/jmockit.iml" filepath="$PROJECT_DIR$/jmockit/jmockit.iml" />

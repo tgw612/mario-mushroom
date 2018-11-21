@@ -4,6 +4,11 @@
 JVM调优专栏
 https://mp.weixin.qq.com/s/01vNcW2Ubsvkp1OULKpPkg
 
+
+简书
+OOM异常 https://www.jianshu.com/p/2fdee831ed03
+
+
 java的四种引用
 强引用(Strong Reference):对象是强引用的时候,即使jvm内存空间不足,GC也不会回收该对象,当满时,报OutOfMemoryError异常
 软引用(Soft Reference):JVM内存不足时,会回收软引用,其引用可以关联一个引用队列(需要在一个对象的可达性(是否已被GC回收)发生变化时得到通知,
