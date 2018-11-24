@@ -1,0 +1,3 @@
+docker search rabbitmq:management
+docker pull macintoshplus/rabbitmq-management
+docker run --name rabbitmq -p 15672:15672 -d macintoshplus/rabbitmq-management:latest

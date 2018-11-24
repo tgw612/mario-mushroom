@@ -1,1 +1,40 @@
 https://mp.weixin.qq.com/s/a5fnVpXH1xCtgXHu6jg1LQ
+
+docker基础命令
+查看Docker信息
+
+docker info
+下载镜像
+docker pull busybox
+BusyBox是一个最小的Linux系统
+运行一个带标签镜像的容器
+sudo docker run -t -i ubuntu:14.04 /bin/bash
+跑个Hello World
+docker run busybox /bin/echo Hello World
+构建容器
+sample_job=$(docker run -d busybox /bin/sh -c "while true;do echo Docker;sleep 1;done")
+其中的-d是放在后台执行
+查看日志
+docker logs $sample_job
+名为sample_job的容器，停止命令是
+docker stop $sample_job
+重启该容器
+docker restart $sample_job
+要将容器删除，需要先将容器停止，容器删除命令为：
+docker rm $sample_job
+将容器的状态保存为新的镜像的方法为：
+docker commit
+查看镜像
+docker images
+搜索镜像
+docker search (image-name)
+查看镜像的历史版本
+docker history (image-name)
+将镜像推送到registry
+docker push (image-name)
+查看我们正在运行的容器
+docker ps -l
+端口映射
+docker run -d -p 5000:5000 training/webapp python app.py
+移除镜像
+docker rmi（镜像名称或者id前3位）

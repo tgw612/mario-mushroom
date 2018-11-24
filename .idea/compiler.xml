@@ -19,7 +19,6 @@
         <module name="linux" />
         <module name="mybatis" />
         <module name="netty" />
-        <module name="rabbitmq" />
         <module name="redis" />
         <module name="rocketmq" />
         <module name="rpc" />

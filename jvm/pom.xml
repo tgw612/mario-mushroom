@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jvm</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.jeesy</groupId>
+            <artifactId>classinfo</artifactId>
+            <version>0.5.2</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
