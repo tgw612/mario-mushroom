@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="txc-client-2.0.72">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/transactional/txc-client-2.0.72.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

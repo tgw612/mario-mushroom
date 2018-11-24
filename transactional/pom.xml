@@ -15,6 +15,18 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.txc</groupId>
+            <artifactId>txc-client</artifactId>
+            <version>2.0.72</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/${txc-sdk-package-name}</systemPath>
+        </dependency>
     </dependencies>
 
 
