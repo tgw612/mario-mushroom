@@ -46,7 +46,10 @@
       <module name="mushroom" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="rabbit_consumer" target="1.5" />
+      <module name="rabbit_producer" target="1.5" />
       <module name="rabbitmq" target="1.8" />
+      <module name="rabbitmqproducer" target="1.8" />
       <module name="redis" target="1.8" />
       <module name="rocketmq" target="1.8" />
       <module name="rpc" target="1.8" />
