@@ -15,13 +15,4 @@
         <!--<module>rabbit_producer</module>-->
         <!--<module>rabbit_consumer</module>-->
     <!--</modules>-->
-
-    <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.rabbitmq</groupId>-->
-            <!--<artifactId>amqp-client</artifactId>-->
-            <!--<version>4.2.1</version>-->
-        <!--</dependency>-->
-    </dependencies>
-
 </project>
