@@ -12,6 +12,7 @@
         <module name="demo" />
         <module name="design-pattern" />
         <module name="docker" />
+        <module name="idea" />
         <module name="jdk" />
         <module name="jmockit" />
         <module name="jvm" />
@@ -39,6 +40,7 @@
       <module name="design-pattern" target="1.8" />
       <module name="designpattern" target="1.8" />
       <module name="docker" target="1.8" />
+      <module name="idea" target="1.8" />
       <module name="jdk" target="1.8" />
       <module name="jmockit" target="1.8" />
       <module name="jvm" target="1.8" />
