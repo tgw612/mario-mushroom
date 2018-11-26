@@ -17,6 +17,7 @@
         <module name="jvm" />
         <module name="kafka" />
         <module name="linux" />
+        <module name="maven" />
         <module name="mybatis" />
         <module name="netty" />
         <module name="redis" />
@@ -43,6 +44,7 @@
       <module name="jvm" target="1.8" />
       <module name="kafka" target="1.8" />
       <module name="linux" target="1.8" />
+      <module name="maven" target="1.8" />
       <module name="mushroom" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />

@@ -11,11 +11,9 @@ package creazyjava.company;
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
-// ͨ���̳�Thread���������߳���
 public class ExtendThread extends Thread {
     private int i;
 
-    // ��дrun������run�����ķ���������߳�ִ����
     public void run() {
         for (; i < 100; i++) {
             System.out.println(this.getName() + " " + i);
@@ -24,13 +22,10 @@ public class ExtendThread extends Thread {
 
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
-            // ����Thread��currentThread������ȡ��ǰ�߳�
             System.out.println(Thread.currentThread().getName()
                     + " " + i);
             if (i == 20) {
-                // ��������������һ���߳�
                 new ExtendThread().start();
-                // �������������ڶ����߳�
                 new ExtendThread().start();
             }
         }

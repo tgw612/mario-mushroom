@@ -1,6 +1,6 @@
 package creazyjava.company;
 
-import java.util.concurrent.*;
+import java.util.concurrent.FutureTask;
 
 /**
  * Description:
@@ -16,30 +16,24 @@ import java.util.concurrent.*;
 
 public class FuturetaskThread {
     public static void main(String[] args) {
-        // ����Callable����
         FuturetaskThread rt = new FuturetaskThread();
-        // ��ʹ��Lambda���ʽ����Callable<Integer>����
-        // ʹ��FutureTask����װCallable����
-        FutureTask<Integer> task = new FutureTask<>((Callable<Integer>) () -> {
+        FutureTask<Integer> task = new FutureTask<>(() -> {
             int i = 0;
             for (; i < 100; i++) {
                 System.out.println(Thread.currentThread().getName()
-                        + " ��ѭ������i��ֵ��" + i);
+                        + "count:" + i);
             }
-            // call()���������з���ֵ
             return i;
         });
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName()
-                    + " ��ѭ������i��ֵ��" + i);
+                    + " currentThread:" + i);
             if (i == 20) {
-                // ʵ�ʻ�����Callable�������������������߳�
-                new Thread(task, "�з���ֵ���߳�").start();
+                new Thread(task, "FutureTask").start();
             }
         }
         try {
-            // ��ȡ�̷߳���ֵ
-            System.out.println("���̵߳ķ���ֵ��" + task.get());
+            System.out.println("result" + task.get());
         } catch (Exception ex) {
             ex.printStackTrace();
         }
