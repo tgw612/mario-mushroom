@@ -35,6 +35,7 @@
         <module>maven</module>
         <module>idea</module>
         <module>activemq</module>
+        <module>jvisualvm</module>
         <!--<module>storm</module>-->
         <!--<module>hbase</module>-->
         <!--<module>rabbitmq</module>-->

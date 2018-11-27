@@ -16,6 +16,7 @@
         <module name="idea" />
         <module name="jdk" />
         <module name="jmockit" />
+        <module name="jvisualvm" />
         <module name="jvm" />
         <module name="kafka" />
         <module name="linux" />
@@ -45,6 +46,7 @@
       <module name="idea" target="1.8" />
       <module name="jdk" target="1.8" />
       <module name="jmockit" target="1.8" />
+      <module name="jvisualvm" target="1.8" />
       <module name="jvm" target="1.8" />
       <module name="kafka" target="1.8" />
       <module name="linux" target="1.8" />
