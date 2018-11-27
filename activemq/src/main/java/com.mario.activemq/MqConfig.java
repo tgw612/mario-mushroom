@@ -5,13 +5,16 @@ import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.core.JmsMessagingTemplate;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Queue;
-
+@Configuration
+@EnableJms
 public class MqConfig {
     @Value("${spring.activemq.broker-url}")
     private String broker_url;
