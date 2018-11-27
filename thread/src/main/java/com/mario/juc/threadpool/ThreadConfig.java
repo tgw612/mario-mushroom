@@ -1,4 +1,4 @@
-package com.mario.juc;
+package com.mario.juc.threadpool;
 
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.lang.reflect.Method;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 @EnableAsync
@@ -17,13 +16,15 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class ThreadConfig implements AsyncConfigurer {
 
     @Bean(value = "taskExecutor")
-    public Executor getAsyncExcutor() {
+    public ThreadPoolTaskExecutor getAsyncExcutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(10);
         executor.setMaxPoolSize(20);
         executor.setQueueCapacity(200);
         executor.setKeepAliveSeconds(60);
         executor.setThreadNamePrefix("taskExecutor-");
+        executor.setAwaitTerminationSeconds(10);
+        executor.setWaitForTasksToCompleteOnShutdown(true);
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         return executor;
     }
