@@ -1,4 +1,4 @@
-package com.mario.rabbitmq;
+package com.mario.rabbitmq.sample;
 
 import com.rabbitmq.client.*;
 
