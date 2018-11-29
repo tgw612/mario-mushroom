@@ -38,8 +38,6 @@
         <module>jvisualvm</module>
         <!--<module>storm</module>-->
         <!--<module>hbase</module>-->
-        <!--<module>rabbitmq</module>-->
-        <!--<module>rocketmq</module>-->
         <!--<module>memcache</module>-->
         <!--<module>easypoi</module>-->
         <!--<module>dubbo</module>-->

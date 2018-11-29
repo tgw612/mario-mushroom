@@ -1,7 +1,5 @@
 package com.mario.juc.delayqueue;
 
-import lombok.NoArgsConstructor;
-
 import java.util.Map;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.ExecutorService;
@@ -9,7 +7,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-@NoArgsConstructor
 public class DelayOrderQueueManager {
     private final static int DEFAULE_THREAD_NUM = 5;
     private static int thread_num = DEFAULE_THREAD_NUM;
@@ -22,13 +19,11 @@ public class DelayOrderQueueManager {
     private final long n = 1L;
     private static DelayOrderQueueManager instance = new DelayOrderQueueManager();
 
-    public DelayOrderQueueManager() {
-    }
 
-    public DelayOrderQueueManager(ExecutorService executorService, Thread daemonThread, DelayQueue<DelayOrderTask<?>> delayQueue) {
+    public DelayOrderQueueManager() {
         this.executorService = Executors.newFixedThreadPool(thread_num);
-        init();
         this.delayQueue = new DelayQueue<>();
+        init();
     }
 
     public static DelayOrderQueueManager getInstance() {
@@ -52,9 +47,9 @@ public class DelayOrderQueueManager {
 
             try {
                 DelayOrderTask<?> delayOrderTask = delayQueue.take();
-                if (delayOrderTask!=null){
+                if (delayOrderTask != null) {
                     Runnable task = delayOrderTask.getTask();
-                    if(task!=null){
+                    if (task != null) {
                         continue;
                     }
                     executorService.execute(task);
@@ -65,14 +60,14 @@ public class DelayOrderQueueManager {
         }
     }
 
-    public void put(Runnable task, long time , TimeUnit unit){
-        long timeout = TimeUnit.NANOSECONDS.convert(time,unit);
-        DelayOrderTask<?> delayOrder =new DelayOrderTask<>(timeout,task);
+    public void put(Runnable task, long time, TimeUnit unit) {
+        long timeout = TimeUnit.NANOSECONDS.convert(time, unit);
+        DelayOrderTask<?> delayOrder = new DelayOrderTask<>(timeout, task);
         delayQueue.put(delayOrder);
     }
 
 
-    public boolean removeTask(DelayOrderTask task){
+    public boolean removeTask(DelayOrderTask task) {
         return delayQueue.remove(task);
     }
 }

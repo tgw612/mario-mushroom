@@ -16,7 +16,6 @@
         <module name="idea" />
         <module name="jdk" />
         <module name="jmockit" />
-        <module name="jvisualvm" />
         <module name="jvm" />
         <module name="kafka" />
         <module name="linux" />
