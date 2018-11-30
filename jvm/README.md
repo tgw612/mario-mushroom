@@ -3,8 +3,8 @@
 
 JVM调优专栏
 https://mp.weixin.qq.com/s/01vNcW2Ubsvkp1OULKpPkg
-
-
+JVM简介
+https://www.cnblogs.com/leeSmall/p/7624239.html
 简书
 OOM异常 https://www.jianshu.com/p/2fdee831ed03
 
