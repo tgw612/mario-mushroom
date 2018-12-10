@@ -1,4 +1,4 @@
-package com.mario.designpattern;
+package com.mario.designpattern.singleton;
 
 public class Singleton {
     private static class SingletonHolder {

@@ -19,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/maven" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/orika" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq/rabbit_consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq/rabbit_producer" charset="UTF-8" />
