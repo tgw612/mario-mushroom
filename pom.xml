@@ -35,10 +35,14 @@
         <module>maven</module>
         <module>idea</module>
         <module>activemq</module>
-        <module>jvisualvm</module>
         <module>orika</module>
+        <module>hbase</module>
+        <module>storm</module>
+        <module>hive</module>
+        <module>flink</module>
+        <module>spark</module>
         <!--<module>storm</module>-->
-        <!--<module>hbase</module>-->
+
         <!--<module>memcache</module>-->
         <!--<module>easypoi</module>-->
         <!--<module>dubbo</module>-->

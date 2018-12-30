@@ -13,6 +13,9 @@
         <module name="demo" />
         <module name="design-pattern" />
         <module name="docker" />
+        <module name="flink" />
+        <module name="hbase" />
+        <module name="hive" />
         <module name="idea" />
         <module name="jdk" />
         <module name="jmockit" />
@@ -28,8 +31,10 @@
         <module name="rpc" />
         <module name="security" />
         <module name="sharding" />
+        <module name="spark" />
         <module name="spring" />
         <module name="sql" />
+        <module name="storm" />
         <module name="thread" />
         <module name="transactional" />
       </profile>
@@ -43,6 +48,11 @@
       <module name="design-pattern" target="1.8" />
       <module name="designpattern" target="1.8" />
       <module name="docker" target="1.8" />
+      <module name="flink" target="1.8" />
+      <module name="hbase" target="1.8" />
+      <module name="hbase (1)" target="1.8" />
+      <module name="hbase (2)" target="1.8" />
+      <module name="hive" target="1.8" />
       <module name="idea" target="1.8" />
       <module name="jdk" target="1.8" />
       <module name="jmockit" target="1.8" />
@@ -64,8 +74,10 @@
       <module name="rpc" target="1.8" />
       <module name="security" target="1.8" />
       <module name="sharding" target="1.8" />
+      <module name="spark" target="1.8" />
       <module name="spring" target="1.8" />
       <module name="sql" target="1.8" />
+      <module name="storm" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
     </bytecodeTargetLevel>
