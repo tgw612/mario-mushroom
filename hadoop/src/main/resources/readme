@@ -1,0 +1,55 @@
+大数据安装配置
+
+1.vim ~/.bash_profile
+2.export PATH=/Users/tgw/Documents/hadoop/hadoop/hadoop-2.9.2:/Users/tgw/Documents/hadoop/hadoop/hadoop-2.9.2/bin$PATH
+export PATH
+3.source ~/.bash_profile
+
+#java_path
+/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+
+#HADOOP
+hadoop namenode -format
+启动hadoop 在sbin目录
+./start-all.sh
+http://localhost:50070/dfshealth.html#tab-overview
+#HDFS
+1.在/Users/tgw/Documents/hadoop/hadoop/hadoop-2.9.2/bin
+执行以下命令在 HDFS 上创建一个 test 目录:
+./hdfs dfs -mkdir /test
+2.上传文件至HDFS
+./hdfs dfs -put /Users/tgw/Downloads/book/words.txt /test/
+3.spark读取
+val file=sc.textFile('hdfs://localhost:9000/test/words/txt') 
+
+
+#云服务器
+ssh -q -l root -p 22 129.204.113.128
+#Zookeeper
+zkServer.sh start
+zkServer.sh {start|start-foreground|stop|restart|status|upgrade|print-cmd}
+登陆ZK
+
+
+#Kafka
+kafka-server-start.sh -daemon ../config/server.properties
+kafka-server-start.sh -daemon ../config/server-0.properties
+Jps查看是否启动
+kafka-manager
+
+#flume
+Flume-ng agent --conf /Users/tgw/Documents/hadoop/flume/apache-flume-1.8.0-bin/conf --conf-file /Users/tgw/Documents/hadoop/flume/apache-flume-1.8.0-bin/conf/flume-conf.properties.template  --name agent -Dflume.root.logger=INFO,console
+
+创建kafkatopic
+kafka-topics .sh --zookeeper localhost:2181 --create --topic account-access-log --partitions 1 --replication-factor 1
+
+
+#ELK  flume->kafka->logstash->es->kibana
+#ES
+
+#Logstash
+kafka-topics.sh --zookeeper localhost:2181  --create  --topic kafka-elk-log --partitions 1 --replication-factor 1
+
+
+#docker
+docker run -d -p 127.0.0.1:3306:3306 --name test-mysql -v ~/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD="root" -d mysql

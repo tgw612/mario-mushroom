@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/docker" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elasticsearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flume" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hadoop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbase" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hive" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/idea" charset="UTF-8" />

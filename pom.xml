@@ -43,6 +43,7 @@
         <module>spark</module>
         <module>elasticsearch</module>
         <module>flume</module>
+        <module>hadoop</module>
         <!--<module>storm</module>-->
 
         <!--<module>memcache</module>-->
