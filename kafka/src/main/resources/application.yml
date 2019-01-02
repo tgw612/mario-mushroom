@@ -4,8 +4,7 @@ spring:
   messages:
     basename: i18n/Messages,i18n/Pages
   kafka:
-    bootstrap-servers:
-    - kafka-single:9095
+    bootstrap-servers: - kafka-single:9092
     template:
       default-topic: mldn-microboot
     producer:
@@ -14,3 +13,12 @@ spring:
     properties:
       sasl.mechanism: PLAIN
       security.protocol: SASL_PLAINTEXT
+
+
+#log4j:
+#  rootLogger:info,stdout,info,kafka
+#  logger:
+#    info:info
+#  appender:
+#    info:com.
+

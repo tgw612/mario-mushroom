@@ -41,6 +41,8 @@
         <module>hive</module>
         <module>flink</module>
         <module>spark</module>
+        <module>elasticsearch</module>
+        <module>flume</module>
         <!--<module>storm</module>-->
 
         <!--<module>memcache</module>-->

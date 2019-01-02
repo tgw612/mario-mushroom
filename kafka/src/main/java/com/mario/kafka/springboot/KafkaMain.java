@@ -9,6 +9,7 @@ public class KafkaMain {
         System.setProperty("java.security.auth.login.config",
                 "d:/kafka_client_jaas.conf"); // 表示系统环境属性
     }
+
     public static void main(String[] args) throws Exception {
         SpringApplication.run(KafkaMain.class, args);
     }
