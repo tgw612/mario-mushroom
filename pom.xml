@@ -44,6 +44,7 @@
         <module>elasticsearch</module>
         <module>flume</module>
         <module>hadoop</module>
+        <module>akka</module>
         <!--<module>storm</module>-->
 
         <!--<module>memcache</module>-->
