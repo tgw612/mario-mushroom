@@ -1,0 +1,22 @@
+groupadd elssearch
+
+创建用户 elssearch。创建一个 elssearch 的用户，并将该用户加入到 elssearch 用户组， 同时设置该用户登录密码为 elssearch，命令如下:
+useradd elssearch -g elssearch -p elssearch
+
+更改 Elasticsearch 安装目录所属用户。修改 elasticsearch 安装目录及其子目录属于elssearch用户，进入/usr/local/so位ware/elasticsearch 目录下，
+执行命令如下:chown -R elssearch:elssearch elasticsearch
+
+(4)切换到 elssearch用户。切换到新创建的用户 elssearch，命令如下:
+su elssearch
+
+
+
+
+
+elk
+./logstash -f logstash.conf
+
+
+
+服务器性能监控系统
+Metricbeat

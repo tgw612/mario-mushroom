@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="activemq" />
+        <module name="akka" />
         <module name="algorithm" />
         <module name="aop" />
         <module name="cap" />
@@ -44,6 +45,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="activemq" target="1.8" />
+      <module name="akka" target="1.8" />
       <module name="algorithm" target="1.8" />
       <module name="aop" target="1.8" />
       <module name="cap" target="1.8" />
