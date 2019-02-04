@@ -46,6 +46,7 @@
         <module>hadoop</module>
         <module>akka</module>
         <module>poi</module>
+        <module>dubbo</module>
         <!--<module>storm</module>-->
 
         <!--<module>memcache</module>-->
