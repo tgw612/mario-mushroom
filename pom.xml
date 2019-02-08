@@ -38,6 +38,7 @@
         <module>test</module>
         <module>bigdata</module>
         <module>mq</module>
+        <module>filter-listener-interceptor</module>
         <!--<module>memcache</module>-->
         <!--<module>easypoi</module>-->
         <!--<module>dubbo</module>-->

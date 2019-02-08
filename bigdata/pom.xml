@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>bigdata</artifactId>
+    <packaging>pom</packaging>
 
     <modules>
         <module>hbase</module>
@@ -21,5 +22,6 @@
         <module>flume</module>
         <module>hadoop</module>
         <module>kafka</module>
+        <module>zookeeper</module>
     </modules>
 </project>

@@ -16,6 +16,7 @@
         <module name="docker" />
         <module name="dubbo" />
         <module name="elasticsearch" />
+        <module name="filterlistenerinterceptor" />
         <module name="flink" />
         <module name="flume" />
         <module name="hadoop" />
@@ -61,6 +62,7 @@
       <module name="docker" target="1.8" />
       <module name="dubbo" target="1.8" />
       <module name="elasticsearch" target="1.8" />
+      <module name="filterlistenerinterceptor" target="1.8" />
       <module name="flink" target="1.8" />
       <module name="flume" target="1.8" />
       <module name="hadoop" target="1.8" />

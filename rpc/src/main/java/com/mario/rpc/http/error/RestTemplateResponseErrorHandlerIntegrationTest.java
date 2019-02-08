@@ -32,9 +32,7 @@ public class RestTemplateResponseErrorHandlerIntegrationTest {
     public void giveRemoteApiCall() {
         Assert.assertNotNull(this.builder);
         Assert.assertNotNull(this.builder);
-
         RestTemplate restTemplate = this.builder.errorHandler(new RestTemplateResponseErrorHandler()).build();
-
         this.server.expect(ExpectedCount.once(), requestTo("/bars/4242")).andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.NOT_FOUND));
         Bar response = restTemplate.getForObject("/bars/4242", Bar.class);

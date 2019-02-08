@@ -11,14 +11,11 @@ public class JavassitMain2 {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
         ProxyFactory factory = new ProxyFactory();
         factory.setSuperclass(JavassistTest.class);
-        factory.setFilter(new MethodFilter() {
-            @Override
-            public boolean isHandled(Method method) {
-                if (method.getName().equals("execxute")) {
-                    return true;
-                }
-                return false;
+        factory.setFilter(method -> {
+            if (method.getName().equals("execxute")) {
+                return true;
             }
+            return false;
         });
 
         factory.setHandler(new MethodHandler() {

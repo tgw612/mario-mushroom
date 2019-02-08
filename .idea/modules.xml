@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo.iml" filepath="$PROJECT_DIR$/dubbo/dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/bigdata/elasticsearch/elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/filter-listener-interceptor/filterlistenerinterceptor.iml" filepath="$PROJECT_DIR$/filter-listener-interceptor/filterlistenerinterceptor.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/flink/flink.iml" filepath="$PROJECT_DIR$/bigdata/flink/flink.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/flume/flume.iml" filepath="$PROJECT_DIR$/bigdata/flume/flume.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/hadoop/hadoop.iml" filepath="$PROJECT_DIR$/bigdata/hadoop/hadoop.iml" />
@@ -45,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/transactional/transactional.iml" filepath="$PROJECT_DIR$/transactional/transactional.iml" />
       <module fileurl="file://$PROJECT_DIR$/workflow/workflow.iml" filepath="$PROJECT_DIR$/workflow/workflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" />
     </modules>
   </component>
 </project>

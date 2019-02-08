@@ -27,7 +27,7 @@ public class HttpComponentsClientHttpRequestFactoryDigestAuth extends HttpCompon
         String uri ="http://localhost:8080/spring-security-rest-digest-auth/api/foos/1";
 //        ResponseEntity<Foo>entity
     }
-    public HttpComponentsClientHttpRequestFactoryDigestAuth(HttpClient httpClient, HttpHost host) {
+    public HttpComponentsClientHttpRequestFactoryDigestAuth(HttpHost host,HttpClient httpClient) {
         super(httpClient);
         this.host = host;
     }

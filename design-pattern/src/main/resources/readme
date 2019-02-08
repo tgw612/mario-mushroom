@@ -16,7 +16,6 @@ extension:负责加载java的扩展类库,从jre/lib/ext目录下加载
 system(也可称为application) classloader:从classpath环境变量中加载类文件
 之后下层还有一些子类的类加载器 如tomcat提供了Common Classloader
 
-
 --装饰器模式
 基于组合的方式动态为对象添加功能
 
