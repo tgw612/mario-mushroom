@@ -9,7 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>elasticsearch</artifactId>
+    <artifactId>test</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spock</module>
+        <module>jmockit</module>
+    </modules>
 
 
 </project>

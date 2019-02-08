@@ -2,45 +2,50 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/activemq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/akka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/algorithm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/flink" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/flume" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/hadoop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/hbase" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/hive" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/kafka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/spark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/storm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cap" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/docker" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubbo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/elasticsearch" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flume" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hadoop" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hbase" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hive" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/idea" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdk" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jmockit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jvm" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/linux" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/maven" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq/activemq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq/rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq/rabbitmq/rabbit_consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq/rabbitmq/rabbit_producer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq/rocketmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/orika" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/poi" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rabbitmq" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rabbitmq/rabbit_consumer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rabbitmq/rabbit_producer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rocketmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sharding" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sql" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/storm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/jmockit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/spock" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thread" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/transactional" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workflow" charset="UTF-8" />
   </component>
 </project>

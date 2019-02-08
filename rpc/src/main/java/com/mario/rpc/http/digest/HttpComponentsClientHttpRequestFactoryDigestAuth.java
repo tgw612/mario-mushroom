@@ -2,17 +2,15 @@ package com.mario.rpc.http.digest;
 
 import org.apache.http.HttpHost;
 import org.apache.http.client.AuthCache;
-import org.apache.http.client.protocol.ClientContext;
-import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.protocol.ClientContext;
 import org.apache.http.impl.auth.DigestScheme;
 import org.apache.http.impl.client.BasicAuthCache;
 import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HttpContext;
 import org.junit.Test;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.apache.http.protocol.HttpContext;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;

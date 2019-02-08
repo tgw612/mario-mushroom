@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="activemq" />
-        <module name="akka" />
         <module name="algorithm" />
         <module name="aop" />
+        <module name="bigdata" />
         <module name="cap" />
         <module name="demo" />
         <module name="design-pattern" />
@@ -28,6 +28,7 @@
         <module name="kafka" />
         <module name="linux" />
         <module name="maven" />
+        <module name="mq" />
         <module name="mybatis" />
         <module name="netty" />
         <module name="orika" />
@@ -38,11 +39,13 @@
         <module name="security" />
         <module name="sharding" />
         <module name="spark" />
+        <module name="spock" />
         <module name="spring" />
         <module name="sql" />
         <module name="storm" />
         <module name="thread" />
         <module name="transactional" />
+        <module name="workflow" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -50,6 +53,7 @@
       <module name="akka" target="1.8" />
       <module name="algorithm" target="1.8" />
       <module name="aop" target="1.8" />
+      <module name="bigdata" target="1.8" />
       <module name="cap" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="design-pattern" target="1.8" />
@@ -72,6 +76,7 @@
       <module name="kafka" target="1.8" />
       <module name="linux" target="1.8" />
       <module name="maven" target="1.8" />
+      <module name="mq" target="1.8" />
       <module name="mushroom" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
@@ -87,11 +92,14 @@
       <module name="security" target="1.8" />
       <module name="sharding" target="1.8" />
       <module name="spark" target="1.8" />
+      <module name="spock" target="1.8" />
       <module name="spring" target="1.8" />
       <module name="sql" target="1.8" />
       <module name="storm" target="1.8" />
+      <module name="test" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
+      <module name="workflow" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
