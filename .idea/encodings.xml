@@ -14,6 +14,7 @@
     <file url="file://$PROJECT_DIR$/bigdata/kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bigdata/spark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bigdata/storm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bigdata/zookeeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cap" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />

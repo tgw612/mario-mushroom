@@ -9,7 +9,6 @@
         <module name="activemq" />
         <module name="algorithm" />
         <module name="aop" />
-        <module name="bigdata" />
         <module name="cap" />
         <module name="demo" />
         <module name="design-pattern" />
@@ -47,6 +46,7 @@
         <module name="thread" />
         <module name="transactional" />
         <module name="workflow" />
+        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -102,6 +102,7 @@
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
       <module name="workflow" target="1.8" />
+      <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
