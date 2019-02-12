@@ -1,5 +1,8 @@
 package com.mario.demo.snowflake;
 
+/**
+ * 雪花算法
+ */
 public class IdWorker {
 
     private long workerId;
