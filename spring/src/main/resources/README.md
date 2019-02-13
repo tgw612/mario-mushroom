@@ -5,23 +5,24 @@ spring中每一个bean都由一个对应的BeanDefinition,该实例负责保存 
 包括 bean 对象的 class 类型、是否是抽象类、构造方法和参数、其他属性等等。
 BeanDefinitionRegistry 和 BeanFactory 就是这份菜谱，BeanDefinitionRegistry 抽象出 bean 的注册逻辑。
 而 BeanFactory 则抽象出了 bean 的管理逻辑，而各个 BeanFactory 的实现类就具体承担了 bean 的注册以及管理工作。
+
 那 Spring Boot 有何魔法？自动配置、起步依赖、Actuator、命令行界面(CLI) 是 Spring Boot 最重要的 4 大核心特性。
 其中 CLI 是 Spring Boot 的可选特性，虽然它功能强大，但也引入了一套不太常规的开发模型，因而这个系列的文章仅关注其他 3 种特性。
 抛砖引玉：探索 Spring IOC 容器
 如果有看过 SpringApplication.run() 方法的源码，Spring Boot 冗长无比的启动流程一定会让你抓狂。
 透过现象看本质，SpringApplication 只是将一个典型的Spring应用的启动流程进行了扩展，因此，透彻理解 Spring 容器是打开 Spring Boot 大门的一把钥匙。
+
 Spring IOC 容器
 可以把 Spring IOC 容器比作一间餐馆，当你来到餐馆，通常会直接招呼服务员：点菜！至于菜的原料是什么？如何用原料把菜做出来？可能你根本就不关心。
 IOC 容器也是一样，你只需要告诉它需要某个 bean，它就把对应的实例（instance）扔给你，至于这个 bean 是否依赖其他组件，怎样完成它的初始化，根本就不需要你关心。
 作为餐馆，想要做出菜肴，得知道菜的原料和菜谱，同样地，IOC 容器想要管理各个业务对象以及它们之间的依赖关系，需要通过某种途径来记录和管理这些信息。
 BeanDefinition 对象就承担了这个责任：容器中的每一个 bean 都会有一个对应的 BeanDefinition 实例。
 该实例负责保存 bean 对象的所有必要信息，包括 bean 对象的 class 类型、是否是抽象类、构造方法和参数、其他属性等等。
-当客户端向容器请求相应对象时，容器就会通过这些信息为客户端返回一个完整可用的 bean 实例。
+当客户端向容器请求相应对象时，容器就会通过这些信息为客户端返回一个完整可用的 bean 实例。 
 原材料已经准备好（把 BeanDefinition 看做原料），开始做菜吧，等等，你还需要一份菜谱。
 BeanDefinitionRegistry 和 BeanFactory 就是这份菜谱，BeanDefinitionRegistry 抽象出 bean 的注册逻辑。
 而 BeanFactory 则抽象出了 bean 的管理逻辑，而各个 BeanFactory 的实现类就具体承担了 bean 的注册以及管理工作。
-它们之间的关系就如下图：
-BeanFactory、BeanDefinitionRegistry 关系图（来自：Spring 揭秘）
+
 DefaultListableBeanFactory 作为一个比较通用的 BeanFactory 实现，它同时也实现了 BeanDefinitionRegistry 接口，因此它就承担了 bean 的注册管理工作。
 从图中也可以看出，BeanFactory 接口中主要包含 getBean、containBean、getType、getAliases 等管理 bean 的方法。
 而 BeanDefinitionRegistry 接口则包含 registerBeanDefinition、removeBeanDefinition、getBeanDefinition 等注册管理 BeanDefinition 的方法。
@@ -266,15 +267,15 @@ FailureAnalyzer 用于分析故障并提供相关诊断信息。
 
 
 
-且看下面代码：
-看看这个方法的实现：
-获取到所有的 BeanFactoryPostProcessor 来对容器做一些额外的操作。BeanFactoryPostProcessor 允许我们在容器实例化相应对象之前，对注册到容器的 BeanDefinition 所保存的信息做一些额外的操作。
+获取到所有的 BeanFactoryPostProcessor 来对容器做一些额外的操作。BeanFactoryPostProcessor 允许我们在容器实例化相应对象之前，
+对注册到容器的 BeanDefinition 所保存的信息做一些额外的操作。
 这里的 getBeanFactoryPostProcessors() 方法可以获取到 3 个 Processor：
 不是有那么多 BeanFactoryPostProcessor 的实现类，为什么这儿只有这 3 个？
 因为在初始化流程获取到的各种 ApplicationContextInitializer 和 ApplicationListener 中，只有上文 3 个做了类似于如下操作：
 然后你就可以进入到 PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors() 方法了。
-这个方法除了会遍历上面的 3 个 BeanFactoryPostProcessor 处理外，还会获取类型为 BeanDefinitionRegistryPostProcessor 的 bean： org.springframework.context.annotation.internalConfigurationAnnotationProcessor，对应的 Class 为 ConfigurationClassPostProcessor。
-ConfigurationClassPostProcessor 用于解析处理各种注解，包括：
+这个方法除了会遍历上面的 3 个 BeanFactoryPostProcessor 处理外，还会获取类型为 BeanDefinitionRegistryPostProcessor 的 bean：
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor，对应的 Class 为 ConfigurationClassPostProcessor。
+ConfigurationClassPostProcessor用于解析处理各种注解，包括：
 @Configuration
 @ComponentScan
 @Import
