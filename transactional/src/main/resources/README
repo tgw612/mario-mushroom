@@ -76,9 +76,6 @@ spring事务传播机制,统一在TransactionDefinition类中描述,类中有几
 异步try..catch..可能捕获不到异步抛出的异 常,因为main走完后,异步才可能异常
 异步的事务是可能实现的,主要针对于数据库
 
-
-
-
 分布式一致性
 
 raft算法
