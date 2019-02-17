@@ -1,0 +1,5 @@
+spark streaming
+程序运行在集群上
+RDD弹性分布式数据集,利用集群上的所有节点并行计算的分区元素集合
+
+DataFrame
