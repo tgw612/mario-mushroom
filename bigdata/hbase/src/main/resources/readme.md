@@ -21,3 +21,18 @@ docker run -d -h myhbase -p 2181:2181 -p 8080:8080 -p 8085:8085 -p 9090:9090 -p 
     4.RegionServer死机后,对失效的RegionServer上的Region迁移
 region节点和regionserver:regionserver主要负责用户的IO请求,向HDFS读写数据;每个HRegion对应了Table中的一个region,Hregion由多个HStore组成,
     每个Hstore对应了Table中的一个Cloumn Family的存储.
+
+当storeFile大小超过阈值,出发split操作,Region分裂为2个.父region下线,2个子region被hmaster分配到相应的HregionServer
+Hlog用于记录,数据恢复
+
+
+数据模型
+1.表
+2.行键
+3.列族
+4.单元格
+
+读get 写put 扫描scan 删除delete
+含有版本号
+
+最终一致性
