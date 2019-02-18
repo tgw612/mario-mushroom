@@ -1,5 +1,7 @@
 spark streaming
 程序运行在集群上
 RDD弹性分布式数据集,利用集群上的所有节点并行计算的分区元素集合
+DataFrame 增加了关系型schame
 
-DataFrame
+PCA主成份分析法
+离散余弦变换DCT 经常用于信号处理和图像处理,进行有损数据压缩
