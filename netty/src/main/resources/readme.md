@@ -1,0 +1,99 @@
+关注t-io
+<netty实战>(较好)
+<netty权威指南>
+
+http://fangjian0423.github.io/2016/08/29/netty-in-action-note2/
+异步编程的设计，有两种方式：
+基于Callback
+基于Future
+基于Callback的跟javascript相似，这种方式比较大的问题就是当callback多的时候，代码就变得难以阅读。
+基于Future的方式就是jdk里的concurrent包里的Future接口一样，代表着未来的一个值。
+Netty内部这2种异步编程方式都有使用。
+
+IO阻塞模型对于每一个Socket都会创建一个线程进行处理，虽然可以使用线程池解决线程过多的问题，但是底层还是使用线程处理每一个请求，系统的瓶颈在于线程的个数，并且线程多了会导致频繁的线程切换，导致CPU利用效率不高。
+NIO非阻塞模型采用Reactor模式，一个Reactor线程内部使用一个多路复用器selector，这个selector可以同时注册、监听和轮询成百上千个Channel，一个IO线程可以同时并发处理多个客户端连接，就不会存在频繁的IO线程之间的切换，CPU利用率高。
+
+Channel: 一个Channel表示一个通道，跟io中的stream的角色一样，但是有几点不同。 1. stream是单向的，只支持读或者写，channel是双向的，既支持读也支持写。2. stream是阻塞的，channel是并行的。
+EventLoop: 当一个channel注册之后，会将这个channel绑定到EventLoop里来处理channel的IO操作，一个EventLoop对应一个线程。
+EventLoopGroup: 多个EventLoop的集合
+Bootstrap: 用于配置客户端netty程序，比如连接的host和port，EventLoop等
+ServerBootstrap: 用于配置服务端netty程序，比如绑定的port，EventLoop等
+ChannelHandler: 主要用于处理关于Channel的业务逻辑。比如转换数据格式、当channel状态改变的时候被通知到，当channel注册到EventLoop的时候被通知到以及通知一些用户执行的特殊事件等。ChannelHandler有很多很多的实现类
+ChannelPipeline: 把很多ChannelHandler整合在一起并进行处理
+Future or ChannelFuture: 由于所有的netty都是异步操作。异步操作的结果就是ChannelFuture
+ChannelInBoundHandler和ChannelOutBoundHandler是ChannelHandler的两种很常见的实现类，他们分别用于读取socket中的数据和写数据到socket中，他们存储在ChannelPipeline中用于处理socket，有一张很经典关于ChannelInboundHandler和ChannelOutboundHandler的图如下：
+
+netty中的4种transport，分别是OIO、NIO、Local和Embedded。
+其中OIO这种transport在netty中的io.netty.channel.socket.oio包里，底层使用jdk的java.net包里的类，io模型为阻塞io模型
+NIO在netty中的io.netty.channel.socket.nio包里，底层使用jdk的java.nio.channels包里的类，netty提供了2种nio的实现，分别是基于selector和基于epoll的实现。
+Local在io.netty.channel.local包里，这是一种在同一个JVM中客户端与服务器进行通信的一种transport。
+Embedded在io.netty.channel.embedded包里，主要用于测试，可以在不需要网络的情况下进行ChannelHandler的单元测试。
+这4种transport的使用场景如下：
+OIO: 低连接数，低延迟，需要阻塞时使用
+NIO: 高链接数
+Local: 同一个JVM中进行通信时使用
+Embedded: ChannelHandler单元测试时使用
+
+Jdk的NIO中的ByteBuffer使用成本过多，netty发现了这一缺点并进行了改造，设计出了ByteBuf这个类来代替ByteBuffer，相比ByteBuffer，ByteBuf有如下几个特点：
+可以定义自己的buffer类型，比如heap buffer, direct buffer等
+可以使用内置的composite buffer类型完成零拷贝
+buffer容量可以扩展
+不需要调用flip来切换读写模式
+区分readerIndex和writerIndex
+方法链式调用
+使用引用计数
+可以使用pool来创建buffer
+ByteBuf工作原理：内部有2个索引，分别是readerIndex和writerIndex，初始化时，这2个值都是0，当写入数据到buffer中，writerIndex会增加；当读取数据时，readerIndex会增加。当readerIndex = writerIndex的时候，再进行读取将会抛出IndexOutOfBoundsException异常。
+ByteBuf是有容量概念的，默认情况下的最大的容量是Integer.MAX_VALUE。当writerIndex超过这个容量大小时，将会抛出异常。
+ByteBuf共有3种类型：
+heap buffer: 存储在JVM的堆中，内部使用一个字节数组存储字节。可以使用ByteBuf的hasArray方法判断是否是heap buffer
+direct buffer：在堆外直接内存中分配，效率高，相比于堆内分配的buffer，在堆外直接内存中分配的buffer少了一次缓冲区的内存拷贝(实际上，当使用一个非直接内存buffer的时候，在发送buffer数据出去之前jvm内部会拷贝这个buffer到堆外直接内存中)
+composite buffer：组合型的buffer，比如一个ByteBuf由2个ByteBuf构成，可以使用Composite Buffer完成，可以避免创建一个新的ByteBuf来整合这2个ByteBuf导致的内存拷贝
+以上2、3点再加上netty文件传输采用的transferTo方法(可以直接将文件缓存区的数据发送到目标Channel，不需要通过循环write方式导致的内存拷贝问题)构成了Netty的零拷贝。
+接下来就是ByteBuf的一些常用方法介绍，比如copy, slice, duplicate, readInt, writeInt, indexOf, clear, discardReadBytes方法等等。
+
+https://blog.csdn.net/qq_39658819/article/details/79389528
+Netty4的beta3加了AIO了，但是到beta9又被去了，作者的意思是测试下来AIO性能不如NIO，所以没必要用。我认为也没必要，在linux上NIO的实现本身就是epoll，
+使用jdk的AIO没有意义，在windows上jdk的AIO实现是IOCP，这种情况下使用AIO是比poll的性能高的，但是netty的服务器一般是在linux上，
+所以抛弃windows没啥大不了，windows最多做个客户端，用nio也就够了。
+
+ServerBootstrap中有option和childOption的设置,区别在哪里?
+option()是提供给NioServerSocketChannel用来接收进来的连接,也就是boss线程。childOption()是提供给由父管道ServerChannel接收到的连接
+，也就是worker线程,在这个例子中也是NioServerSocketChannel。
+
+Netty特性
+API使用简单,开发门槛低
+功能强大,预置多种编解码功能,支持多种主流协议
+定制能力强,可通过ChannelHandler对通信框架进行灵活扩展
+性能高
+成熟,稳定,经历大规模商业应用考验,在互联网,大数据,网络游戏,企业应用,电信行业得到成功应用,修复了JDK NIO BUG
+
+通信方式
+如果需要考虑的是两台机器（甚至多台）怎么使用Netty进行通信。大体上分为三种：
+1 第一种：使用长连接通道不断开的形式进行通信。也就是服务端和客户端的通道一直处于开启状态。
+如果服务器性能足够好，并且我们的客户端数量也比较少的情况下，推荐这种方式。
+
+2 第二种：一次性批量提交数据，采用短连接方式。也就是我们会把数据保存在本地临时缓冲区或者临时表里，当达到临界值时一次性批量提交。
+又或者根据定时任务轮询提交。这种情况弊端是做不到实时性传输。对实施性不高的应用程序中推荐使用。
+
+3 第三种：可以使用一种特殊的长连接，在指定某一时间内，服务器与某客户端没有任何通信，则断开连接。下次连接是客户端向服务器发送请求的时候，
+再次建立连接。但是这种模式我们需要考虑两个因素：
+
+
+如何在超时（即服务器和客户端没有任何通信）后关闭通道？
+客户端宕机时，我们无需考虑。下次客户端重启之后我们就可以与服务器建立连接，但是服务器宕机时我们的客户端如何与服务器建立连接呢？
+Netty上传下载
+Netty在上传时会将文件分成多个小块chunck，比方说：一个文件10M，Netty会用ChunckedWriteHandler（支持异步发送的码流（大文件传输）但不占用过多的内存，
+防止java内存溢出）类将这个文件拆分，比如说分成10份，每份1M分10次进行传输，将10次传输封装成1个response进行响应。这样做的好处，每次传输的内容小所以够快。
+
+粘包问题的解决策略
+消息定长
+包尾加回车换行符
+消息头和消息体,消息头包含消息总长度
+半包解码器 如LineBaseFrameDecoder
+
+Netty多协议开发和应用
+HTTP协议的弊端
+半双工，同一时刻，只能有一个方向的数据传输
+消息冗长繁琐
+针对服务器推送的黑客攻击，例如长时间轮询
