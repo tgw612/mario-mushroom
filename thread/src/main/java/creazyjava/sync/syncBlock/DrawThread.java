@@ -12,9 +12,7 @@ package creazyjava.sync.syncBlock;
  */
 public class DrawThread extends Thread
 {
-	// ģ���û��˻�
 	private Account account;
-	// ��ǰȡǮ�߳���ϣ��ȡ��Ǯ��
 	private double drawAmount;
 	public DrawThread(String name , Account account
 		, double drawAmount)
@@ -23,15 +21,11 @@ public class DrawThread extends Thread
 		this.account = account;
 		this.drawAmount = drawAmount;
 	}
-	// �������߳��޸�ͬһ����������ʱ�����漰���ݰ�ȫ���⡣
 	public void run()
 	{
-		// ʹ����Ϊͬ�����������κ��߳̽�������ͬ�������֮ǰ��
-		// �����Ȼ�ö�account�˻����������������߳��޷��������Ҳ���޷��޸���
-		// �����������ϣ������� �� �޸� �� �ͷ��������߼�
+
 		synchronized (account)
 		{
-			// �˻�������ȡǮ��Ŀ
 			if (account.getBalance() >= drawAmount)
 			{
 				// �³���Ʊ
@@ -54,6 +48,5 @@ public class DrawThread extends Thread
 				System.out.println(getName() + "ȡǮʧ�ܣ����㣡");
 			}
 		}
-		// ͬ���������������߳��ͷ�ͬ����
 	}
 }

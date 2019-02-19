@@ -12,21 +12,17 @@ package creazyjava.sync.noLock;
  * @version 1.0
  */
 public class Account {
-    // ��װ�˻���š��˻�����������Ա����
     private String accountNo;
     private double balance;
 
     public Account() {
     }
 
-    // ������
     public Account(String accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
-    // �˴�ʡ����accountNo��balance��setter��getter����
 
-    // accountNo��setter��getter����
     public void setAccountNo(String accountNo) {
         this.accountNo = accountNo;
     }
@@ -35,7 +31,6 @@ public class Account {
         return this.accountNo;
     }
 
-    // balance��setter��getter����
     public void setBalance(double balance) {
         this.balance = balance;
     }
@@ -44,7 +39,6 @@ public class Account {
         return this.balance;
     }
 
-    // ����������������accountNo����дhashCode()��equals()����
     public int hashCode() {
         return accountNo.hashCode();
     }

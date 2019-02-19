@@ -11,15 +11,11 @@ package creazyjava.company;
  * @author Yeeku.H.Lee kongyeeku@163.com
  * @version 1.0
  */
-// ͨ��ʵ��Runnable�ӿ��������߳���
 public class ImplementsThread implements Runnable {
     private int i;
 
-    // run����ͬ�����߳�ִ����
     public void run() {
         for (; i < 100; i++) {
-            // ���߳���ʵ��Runnable�ӿ�ʱ��
-            // ������ȡ��ǰ�̣߳�ֻ����Thread.currentThread()������
             System.out.println(Thread.currentThread().getName()
                     + "  " + i);
         }
@@ -30,10 +26,9 @@ public class ImplementsThread implements Runnable {
             System.out.println(Thread.currentThread().getName()
                     + "  " + i);
             if (i == 20) {
-                ImplementsThread st = new ImplementsThread();     // ��
-                // ͨ��new Thread(target , name)�����������߳�
-                new Thread(st, "���߳�1").start();
-                new Thread(st, "���߳�2").start();
+                ImplementsThread st = new ImplementsThread();
+                new Thread(st, "Thread1").start();
+                new Thread(st, "Thread2").start();
             }
         }
     }

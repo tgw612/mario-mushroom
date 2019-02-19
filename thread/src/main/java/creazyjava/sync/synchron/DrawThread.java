@@ -12,9 +12,7 @@ package creazyjava.sync.synchron;
  */
 public class DrawThread extends Thread
 {
-	// ģ���û��˻�
 	private Account account;
-	// ��ǰȡǮ�߳���ϣ��ȡ��Ǯ��
 	private double drawAmount;
 	public DrawThread(String name , Account account
 		, double drawAmount)
@@ -23,7 +21,6 @@ public class DrawThread extends Thread
 		this.account = account;
 		this.drawAmount = drawAmount;
 	}
-	// �ظ�100��ִ��ȡǮ����
 	public void run()
 	{
 		for (int i = 0 ; i < 100 ; i++ )

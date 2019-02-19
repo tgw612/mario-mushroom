@@ -16,20 +16,15 @@ import java.util.concurrent.*;
 public class ThreadPoolTest {
     public static void main(String[] args)
             throws Exception {
-        // �����㹻���߳���֧��4��CPU���е��̳߳�
-        // ����һ�����й̶��߳�����6�����̳߳�
         ExecutorService pool = Executors.newFixedThreadPool(6);
-        // ʹ��Lambda���ʽ����Runnable����
         Runnable target = () -> {
             for (int i = 0; i < 100; i++) {
                 System.out.println(Thread.currentThread().getName()
                         + "��iֵΪ:" + i);
             }
         };
-        // ���̳߳����ύ�����߳�
         pool.submit(target);
         pool.submit(target);
-        // �ر��̳߳�
         pool.shutdown();
     }
 }

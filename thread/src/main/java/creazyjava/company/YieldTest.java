@@ -16,11 +16,9 @@ public class YieldTest extends Thread {
         super(name);
     }
 
-    // ����run������Ϊ�߳�ִ����
     public void run() {
         for (int i = 0; i < 50; i++) {
             System.out.println(getName() + "  " + i);
-            // ��i����20ʱ��ʹ��yield�����õ�ǰ�߳��ò�
             if (i == 20) {
                 Thread.yield();
             }
@@ -28,13 +26,10 @@ public class YieldTest extends Thread {
     }
 
     public static void main(String[] args) throws Exception {
-        // �������������߳�
-        YieldTest yt1 = new YieldTest("�߼�");
-        // ��ty1�߳����ó�������ȼ�
+        YieldTest yt1 = new YieldTest("yt1");
         yt1.setPriority(Thread.MAX_PRIORITY);
         yt1.start();
-        YieldTest yt2 = new YieldTest("�ͼ�");
-        // ��yt2�߳����ó�������ȼ�
+        YieldTest yt2 = new YieldTest("yt2");
         yt2.setPriority(Thread.MIN_PRIORITY);
         yt2.start();
     }

@@ -26,7 +26,7 @@ class A {
     }
 
     public synchronized void last() {
-        System.out.println("??????A???last()???????");
+        System.out.println("last()");
     }
 }
 
@@ -39,8 +39,8 @@ class B {
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        System.out.println("????????: " + Thread.currentThread().getName()
-                + " ???????A?????last()????");  // ??
+        System.out.println("currentThread: " + Thread.currentThread().getName()
+                + " last()");  // ??
         a.last();
     }
 
@@ -53,15 +53,15 @@ public class DeadLock implements Runnable {
     A a = new A();
     B b = new B();
     public void init() {
-        Thread.currentThread().setName("?????");
+        Thread.currentThread().setName("currentThread init");
         a.foo(b);
-        System.out.println("??????????????");
+        System.out.println("init done");
     }
 
     public void run() {
-        Thread.currentThread().setName("?????");
+        Thread.currentThread().setName("currentThread run");
         b.bar(a);
-        System.out.println("?????????????");
+        System.out.println("run done");
     }
 
     public static void main(String[] args) {

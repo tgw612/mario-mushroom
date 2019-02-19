@@ -19,8 +19,7 @@ public class SleepTest
 	{
 		for (int i = 0; i < 10 ; i++ )
 		{
-			System.out.println("��ǰʱ��: " + new Date());
-			// ����sleep�����õ�ǰ�߳���ͣ1s��
+			System.out.println("Date: " + new Date());
 			Thread.sleep(1000);
 		}
 	}

@@ -12,12 +12,10 @@ package creazyjava.company;
  * @version 1.0
  */
 public class JoinThread extends Thread {
-    // �ṩһ���в����Ĺ��������������ø��̵߳�����
     public JoinThread(String name) {
         super(name);
     }
 
-    // ��дrun()�����������߳�ִ����
     public void run() {
         for (int i = 0; i < 100; i++) {
             System.out.println(getName() + "  " + i);
@@ -25,13 +23,11 @@ public class JoinThread extends Thread {
     }
 
     public static void main(String[] args) throws Exception {
-        // �������߳�
-        new JoinThread("���߳�").start();
+        new JoinThread("JoinThread").start();
         for (int i = 0; i < 100; i++) {
             if (i == 20) {
-                JoinThread jt = new JoinThread("��Join���߳�");
+                JoinThread jt = new JoinThread("JoinThread20");
                 jt.start();
-                // main�̵߳�����jt�̵߳�join()������main�̱߳����jtִ�н����Ż�����ִ��
                 jt.join();
             }
             System.out.println(Thread.currentThread().getName()

@@ -12,22 +12,18 @@ package creazyjava.sync.synchron;
  * @version 1.0
  */
 public class Account {
-    // ��װ�˻���š��˻�����������Ա����
     private String accountNo;
     private double balance;
-    // ��ʶ�˻����Ƿ����д������
     private boolean flag = false;
 
     public Account() {
     }
 
-    // ������
     public Account(String accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
 
-    // accountNo��setter��getter����
     public void setAccountNo(String accountNo) {
         this.accountNo = accountNo;
     }
@@ -36,25 +32,20 @@ public class Account {
         return this.accountNo;
     }
 
-    // ����˻�����������޸ģ�����ֻΪbalance�ṩgetter������
     public double getBalance() {
         return this.balance;
     }
 
     public synchronized void draw(double drawAmount) {
         try {
-            // ���flagΪ�٣������˻��л�û���˴�Ǯ��ȥ��ȡǮ��������
             if (!flag) {
                 wait();
             } else {
-                // ִ��ȡǮ
                 System.out.println(Thread.currentThread().getName()
                         + " ȡǮ:" + drawAmount);
                 balance -= drawAmount;
                 System.out.println("�˻����Ϊ��" + balance);
-                // ����ʶ�˻��Ƿ����д��������Ϊfalse��
                 flag = false;
-                // ���������߳�
                 notifyAll();
             }
         } catch (InterruptedException ex) {
@@ -64,19 +55,15 @@ public class Account {
 
     public synchronized void deposit(double depositAmount) {
         try {
-            // ���flagΪ�棬�����˻��������˴�Ǯ��ȥ�����Ǯ��������
-            if (flag)             //��
+            if (flag)
             {
                 wait();
             } else {
-                // ִ�д��
                 System.out.println(Thread.currentThread().getName()
                         + " ���:" + depositAmount);
                 balance += depositAmount;
                 System.out.println("�˻����Ϊ��" + balance);
-                // ����ʾ�˻��Ƿ����д��������Ϊtrue
                 flag = true;
-                // ���������߳�
                 notifyAll();
             }
         } catch (InterruptedException ex) {
@@ -84,7 +71,6 @@ public class Account {
         }
     }
 
-    // ����������������accountNo����дhashCode()��equals()����
     public int hashCode() {
         return accountNo.hashCode();
     }
