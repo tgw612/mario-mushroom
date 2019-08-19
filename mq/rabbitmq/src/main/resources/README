@@ -16,3 +16,5 @@ direct:将msg路由到Bindgkey和RoutingKey完全匹配的队列中
 topic:是direct的拓展,RountingKey/BindingKey为'.'号分割的字符串,如"com.rabbit.client",BindingKey可以存在两种特殊的字符串"*"和"#"
 headers:根据发送消息内容中的headers属性进行匹配,在绑定队列和交换器时指定一组键值对,当发送消息到交换器时,rabbitmq会获取到该消息的
 headers,对比其中的键值对是否完全匹配队列和交换器绑定时指定的键值对,如果完全匹配则消息会路由到该队列,否则不会路由到该队列.
+
+
