@@ -1,5 +1,8 @@
 异步 解耦 削峰填谷
-
+考虑 消息的重复消费、消息丢失、保证消费顺序  分布式事务
+消息的重复消费:分布式锁
+消息丢失:持久化订阅 异步confirm https://www.jianshu.com/p/8ed16edc73e4
+消息顺序性:
 activeMQ
 https://blog.csdn.net/name_is_wl/article/details/82120329
 

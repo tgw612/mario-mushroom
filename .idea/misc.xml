@@ -19,11 +19,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/producer/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/rabbitmq.producer/pom.xml" />
+        <option value="$PROJECT_DIR$/sql/pom.xml" />
         <option value="$PROJECT_DIR$/thread/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8.0_111" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$" />
   </component>
 </project>

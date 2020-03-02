@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/aop/aop.iml" filepath="$PROJECT_DIR$/aop/aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/bigdata.iml" filepath="$PROJECT_DIR$/bigdata/bigdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/cap/cap.iml" filepath="$PROJECT_DIR$/cap/cap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo/consumer/consumer.iml" filepath="$PROJECT_DIR$/dubbo/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db/db.iml" filepath="$PROJECT_DIR$/db/db.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
@@ -25,12 +27,15 @@
       <module fileurl="file://$PROJECT_DIR$/bigdata/kafka/kafka.iml" filepath="$PROJECT_DIR$/bigdata/kafka/kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/linux/linux.iml" filepath="$PROJECT_DIR$/linux/linux.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven/maven.iml" filepath="$PROJECT_DIR$/maven/maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db/mongodb/mongodb.iml" filepath="$PROJECT_DIR$/db/mongodb/mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/mq.iml" filepath="$PROJECT_DIR$/mq/mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/mushroom.iml" filepath="$PROJECT_DIR$/mushroom.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db/mysql/mysql.iml" filepath="$PROJECT_DIR$/db/mysql/mysql.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/orika/orika.iml" filepath="$PROJECT_DIR$/orika/orika.iml" />
       <module fileurl="file://$PROJECT_DIR$/poi/poi.iml" filepath="$PROJECT_DIR$/poi/poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo/producer/producer.iml" filepath="$PROJECT_DIR$/dubbo/producer/producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" />
@@ -40,7 +45,6 @@
       <module fileurl="file://$PROJECT_DIR$/bigdata/spark/spark.iml" filepath="$PROJECT_DIR$/bigdata/spark/spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/spock/spock.iml" filepath="$PROJECT_DIR$/test/spock/spock.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sql/sql.iml" filepath="$PROJECT_DIR$/sql/sql.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/storm/storm.iml" filepath="$PROJECT_DIR$/bigdata/storm/storm.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />

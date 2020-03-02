@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>db</module>
         <module>demo</module>
         <module>redis</module>
         <module>netty</module>
@@ -18,7 +19,6 @@
         <module>mybatis</module>
         <module>aop</module>
         <module>security</module>
-        <module>sql</module>
         <module>transactional</module>
         <module>linux</module>
         <module>algorithm</module>
@@ -30,7 +30,6 @@
         <module>spring</module>
         <module>jdk</module>
         <module>maven</module>
-        <module>idea</module>
         <module>orika</module>
         <module>poi</module>
         <module>dubbo</module>
