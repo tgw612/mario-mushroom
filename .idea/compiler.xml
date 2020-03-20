@@ -7,50 +7,39 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zookeeper" />
-        <module name="spring" />
         <module name="idea" />
         <module name="flink" />
         <module name="demo" />
         <module name="elasticsearch" />
         <module name="jmockit" />
+        <module name="mq" />
         <module name="spock" />
-        <module name="rpc" />
         <module name="mongodb" />
-        <module name="cap" />
         <module name="rocketmq" />
-        <module name="consumer" />
-        <module name="sharding" />
         <module name="kafka" />
         <module name="activemq" />
         <module name="netty" />
         <module name="security" />
-        <module name="linux" />
         <module name="transactional" />
         <module name="hbase" />
+        <module name="distribute" />
         <module name="orika" />
         <module name="db" />
         <module name="hadoop" />
-        <module name="maven" />
         <module name="spark" />
         <module name="hive" />
+        <module name="orm" />
         <module name="thread" />
-        <module name="filterlistenerinterceptor" />
         <module name="poi" />
-        <module name="mybatis" />
-        <module name="algorithm" />
-        <module name="redis" />
-        <module name="mq" />
-        <module name="aop" />
+        <module name="base" />
+        <module name="cache" />
         <module name="docker" />
         <module name="workflow" />
         <module name="storm" />
         <module name="jvm" />
         <module name="flume" />
         <module name="design-pattern" />
-        <module name="producer" />
         <module name="mysql" />
-        <module name="jdk" />
-        <module name="dubbo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -58,13 +47,16 @@
       <module name="akka" target="1.8" />
       <module name="algorithm" target="1.8" />
       <module name="aop" target="1.8" />
+      <module name="base" target="1.8" />
       <module name="bigdata" target="1.8" />
+      <module name="cache" target="1.8" />
       <module name="cap" target="1.8" />
       <module name="consumer" target="1.8" />
       <module name="db" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="design-pattern" target="1.8" />
       <module name="designpattern" target="1.8" />
+      <module name="distribute" target="1.8" />
       <module name="docker" target="1.8" />
       <module name="dubbo" target="1.8" />
       <module name="elasticsearch" target="1.8" />
@@ -91,6 +83,7 @@
       <module name="mysql" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="orika" target="1.8" />
+      <module name="orm" target="1.8" />
       <module name="poi" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="rabbit_consumer" target="1.5" />
@@ -119,11 +112,14 @@
       <module name="activemq" options="-parameters" />
       <module name="algorithm" options="-parameters" />
       <module name="aop" options="-parameters" />
+      <module name="base" options="-parameters" />
+      <module name="cache" options="-parameters" />
       <module name="cap" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="db" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="design-pattern" options="-parameters" />
+      <module name="distribute" options="-parameters" />
       <module name="docker" options="-parameters" />
       <module name="dubbo" options="-parameters" />
       <module name="elasticsearch" options="-parameters" />
@@ -145,6 +141,7 @@
       <module name="mysql" options="-parameters" />
       <module name="netty" options="-parameters" />
       <module name="orika" options="-parameters" />
+      <module name="orm" options="-parameters" />
       <module name="poi" options="-parameters" />
       <module name="producer" options="-parameters" />
       <module name="redis" options="-parameters" />

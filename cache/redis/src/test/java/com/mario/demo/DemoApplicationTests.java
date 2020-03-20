@@ -1,4 +1,4 @@
-package com.mario.netty;
+package com.mario.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
