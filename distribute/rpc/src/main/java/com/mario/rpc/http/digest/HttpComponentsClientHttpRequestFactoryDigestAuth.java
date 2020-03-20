@@ -1,5 +1,6 @@
 package com.mario.rpc.http.digest;
 
+import java.net.URI;
 import org.apache.http.HttpHost;
 import org.apache.http.client.AuthCache;
 import org.apache.http.client.HttpClient;
@@ -12,8 +13,6 @@ import org.junit.Test;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
-
-import java.net.URI;
 
 /**
  * https://mp.weixin.qq.com/s/Czn0E5dl2qVKqkLG27OVfg

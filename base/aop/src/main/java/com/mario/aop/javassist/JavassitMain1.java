@@ -1,7 +1,5 @@
 package com.mario.aop.javassist;
 
-import org.apache.ibatis.javassist.*;
-
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,10 +1,8 @@
 package com.mario.aop.javassist;
 
-import org.apache.ibatis.javassist.util.proxy.MethodFilter;
+import java.lang.reflect.Method;
 import org.apache.ibatis.javassist.util.proxy.MethodHandler;
 import org.apache.ibatis.javassist.util.proxy.ProxyFactory;
-
-import java.lang.reflect.Method;
 
 public class JavassitMain2 {
 
