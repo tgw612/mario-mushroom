@@ -6,17 +6,13 @@
 
     <parent>
         <groupId>com.mairo</groupId>
-        <artifactId>mushroom</artifactId>
+        <artifactId>distribute</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.mairo</groupId>
-    <artifactId>distribute</artifactId>
+    <artifactId>xxl-job</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>xxl-job</module>
-        <module>rpc</module>
-        <module>cap</module>
-    </modules>
+    
 </project>
