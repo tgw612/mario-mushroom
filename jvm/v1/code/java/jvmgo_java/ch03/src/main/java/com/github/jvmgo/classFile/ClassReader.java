@@ -1,7 +1,6 @@
 package com.github.jvmgo.classfile;
 
 import com.github.jvmgo.util.Util;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;

@@ -1,7 +1,6 @@
 package com.github.jvmgo;
 
 import com.github.jvmgo.classpath.Classpath;
-
 import java.util.Arrays;
 
 public class Main {

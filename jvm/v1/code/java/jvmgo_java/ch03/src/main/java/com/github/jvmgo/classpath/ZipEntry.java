@@ -1,7 +1,5 @@
 package com.github.jvmgo.classpath;
 
-import java.nio.file.*;
-
 class ZipEntry implements Entry {
 
   private Path absPath;
