@@ -24,6 +24,6 @@ server:
   name: kibana
   host: localhost
 elasticsearch:
-  hosts: http://es-cn-0pp1jyb600014xqtz.elasticsearch.aliyuncs.com:9200
-  username:elastic
-  password:Hfgj2020
+  hosts: ip:port
+  username:username
+  password:password
