@@ -12,14 +12,15 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 public class KafkaMainTest {
-    @Resource
-    private IMessageProducerService messageService;
 
-    @Test
-    public void testStart() throws Exception {
-        for (int x = 0; x < 100; x++) {
-            this.messageService.sendMessage("study - " + x);
-        }
+  @Resource
+  private IMessageProducerService messageService;
+
+  @Test
+  public void testStart() throws Exception {
+    for (int x = 0; x < 100; x++) {
+      this.messageService.sendMessage("study - " + x);
     }
+  }
 
 }

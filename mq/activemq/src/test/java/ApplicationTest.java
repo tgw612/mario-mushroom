@@ -11,24 +11,24 @@ import javax.annotation.Resource;
 public class ApplicationTest {
 
 
-    @Resource
-    private ActiveMQSendService activeMQSendService;
+  @Resource
+  private ActiveMQSendService activeMQSendService;
 
-    @Test
-    public void testSendQueue() {
-        activeMQSendService.sendQueueMessage("queue===============");
-    }
+  @Test
+  public void testSendQueue() {
+    activeMQSendService.sendQueueMessage("queue===============");
+  }
 
-    @Test
-    public void testSendTopic() {
-        activeMQSendService.sendTopicMessage("topic================");
-    }
+  @Test
+  public void testSendTopic() {
+    activeMQSendService.sendTopicMessage("topic================");
+  }
 
 
-    @Test
-    public void testSendVirtualTopic() {
-        activeMQSendService.sendVirtualTopicQueue("virtualTopic==============");
-    }
+  @Test
+  public void testSendVirtualTopic() {
+    activeMQSendService.sendVirtualTopicQueue("virtualTopic==============");
+  }
 
 
 }

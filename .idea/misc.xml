@@ -9,18 +9,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/hbase/pom.xml" />
+        <option value="$PROJECT_DIR$/bigdata/elasticsearch/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
-        <option value="$PROJECT_DIR$/jmockit/pom.xml" />
         <option value="$PROJECT_DIR$/jvm/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/rabbitmq/producer/pom.xml" />
-        <option value="$PROJECT_DIR$/rabbitmq/rabbitmq.producer/pom.xml" />
-        <option value="$PROJECT_DIR$/sql/pom.xml" />
-        <option value="$PROJECT_DIR$/thread/pom.xml" />
       </set>
     </option>
   </component>

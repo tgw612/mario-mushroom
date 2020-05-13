@@ -11,15 +11,16 @@ import javax.jms.Queue;
 
 @Component
 public class ActiveMQSendService {
-    private static final Logger logger = LoggerFactory.getLogger(ActiveMQSendService.class);
 
-    private JmsMessagingTemplate jmsMessagingTemplate;
+  private static final Logger logger = LoggerFactory.getLogger(ActiveMQSendService.class);
 
-    private Queue queueQueue;
+  private JmsMessagingTemplate jmsMessagingTemplate;
 
-    private ActiveMQTopic activeMQTopic;
+  private Queue queueQueue;
 
-    private ActiveMQTopic virtualTopicQueue;
+  private ActiveMQTopic activeMQTopic;
+
+  private ActiveMQTopic virtualTopicQueue;
 
 //    @Autowired
 //    public ActiveMQSendService(JmsMessagingTemplate jmsMessagingTemplate,
@@ -32,47 +33,47 @@ public class ActiveMQSendService {
 //        this.activeMQTopic = topicQueue;
 //    }
 
-    @Autowired
+  @Autowired
 
-    public ActiveMQSendService(JmsMessagingTemplate jmsMessagingTemplate,
+  public ActiveMQSendService(JmsMessagingTemplate jmsMessagingTemplate,
 
-                               Queue queueQueue,
+      Queue queueQueue,
 
-                               ActiveMQTopic topicQueue,
+      ActiveMQTopic topicQueue,
 
-                               ActiveMQTopic virtualTopicQueue) {
+      ActiveMQTopic virtualTopicQueue) {
 
-        this.jmsMessagingTemplate = jmsMessagingTemplate;
+    this.jmsMessagingTemplate = jmsMessagingTemplate;
 
-        this.queueQueue = queueQueue;
+    this.queueQueue = queueQueue;
 
-        this.activeMQTopic = topicQueue;
+    this.activeMQTopic = topicQueue;
 
-        this.virtualTopicQueue = virtualTopicQueue;
+    this.virtualTopicQueue = virtualTopicQueue;
 
-    }
+  }
 
-    public void sendQueueMessage(String message) {
+  public void sendQueueMessage(String message) {
 
-        logger.info("send queue:{}", message);
+    logger.info("send queue:{}", message);
 
-        jmsMessagingTemplate.convertAndSend(queueQueue, message);
+    jmsMessagingTemplate.convertAndSend(queueQueue, message);
 
-    }
+  }
 
-    public void sendTopicMessage(String message) {
+  public void sendTopicMessage(String message) {
 
-        logger.info("send topic:{}", message);
+    logger.info("send topic:{}", message);
 
-        jmsMessagingTemplate.convertAndSend(activeMQTopic, message);
+    jmsMessagingTemplate.convertAndSend(activeMQTopic, message);
 
-    }
+  }
 
-    public void sendVirtualTopicQueue(String message) {
+  public void sendVirtualTopicQueue(String message) {
 
-        logger.info("send virtualTopic:{}", message);
+    logger.info("send virtualTopic:{}", message);
 
-        jmsMessagingTemplate.convertAndSend(virtualTopicQueue, message);
+    jmsMessagingTemplate.convertAndSend(virtualTopicQueue, message);
 
-    }
+  }
 }

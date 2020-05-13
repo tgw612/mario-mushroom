@@ -7,12 +7,14 @@ import javax.annotation.Resource;
 
 @Service
 public class MessageProducerServiceImpl implements IMessageProducerService {
-    @Resource
-    private RabbitTemplate rabbitTemplate;
-    @Override
-    public void sendMessage(String msg) {
-        this.rabbitTemplate.convertAndSend(ProducerConfig.EXCHANGE,
-                ProducerConfig.ROUTINGKEY, msg);
-    }
+
+  @Resource
+  private RabbitTemplate rabbitTemplate;
+
+  @Override
+  public void sendMessage(String msg) {
+    this.rabbitTemplate.convertAndSend(ProducerConfig.EXCHANGE,
+        ProducerConfig.ROUTINGKEY, msg);
+  }
 
 }

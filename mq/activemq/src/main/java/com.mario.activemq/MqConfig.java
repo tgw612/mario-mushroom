@@ -13,91 +13,96 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Queue;
+
 @Configuration
 @EnableJms
 public class MqConfig {
-    @Value("${spring.activemq.broker-url}")
-    private String broker_url;
 
-    @Value("${spring.activemq.user}")
-    private String jmsUser;
+  @Value("${spring.activemq.broker-url}")
+  private String broker_url;
 
-    @Value("${spring.activemq.password}")
-    private String jsmPass;
+  @Value("${spring.activemq.user}")
+  private String jmsUser;
 
-    private static final String QUEUE_NAME_ = "queue";
+  @Value("${spring.activemq.password}")
+  private String jsmPass;
 
-    private static final String TOPIC_NAME = "orders";
+  private static final String QUEUE_NAME_ = "queue";
 
-    @Bean("queue")
-    public Queue queueQueue() {
-        return new ActiveMQQueue(QUEUE_NAME_);
+  private static final String TOPIC_NAME = "orders";
 
-    }
+  @Bean("queue")
+  public Queue queueQueue() {
+    return new ActiveMQQueue(QUEUE_NAME_);
 
-    @Bean("topicQueue")
-    public ActiveMQTopic topicQueue() {
+  }
 
-        return new ActiveMQTopic(TOPIC_NAME);
+  @Bean("topicQueue")
+  public ActiveMQTopic topicQueue() {
 
-    }
+    return new ActiveMQTopic(TOPIC_NAME);
 
-    @Bean(name = "activeMQConnectionFactory")
-    public ActiveMQConnectionFactory activeMQConnectionFactory() {
+  }
 
-        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(jmsUser, jsmPass, broker_url);
+  @Bean(name = "activeMQConnectionFactory")
+  public ActiveMQConnectionFactory activeMQConnectionFactory() {
 
-        activeMQConnectionFactory.setTrustAllPackages(true);
+    ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(jmsUser,
+        jsmPass, broker_url);
 
-        return activeMQConnectionFactory;
+    activeMQConnectionFactory.setTrustAllPackages(true);
 
-    }
+    return activeMQConnectionFactory;
 
-    @Bean(name = "queueListenerFactory")
-    public JmsListenerContainerFactory queueListenerFactory(ConnectionFactory activeMQConnectionFactory) {
+  }
 
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+  @Bean(name = "queueListenerFactory")
+  public JmsListenerContainerFactory queueListenerFactory(
+      ConnectionFactory activeMQConnectionFactory) {
 
-        factory.setPubSubDomain(false);
+    DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
 
-        factory.setConnectionFactory(activeMQConnectionFactory);
+    factory.setPubSubDomain(false);
 
-        return factory;
+    factory.setConnectionFactory(activeMQConnectionFactory);
 
-    }
+    return factory;
 
-    @Bean(name = "topicListenerFactory")
-    public JmsListenerContainerFactory topicListenerFactory(ConnectionFactory activeMQConnectionFactory) {
+  }
 
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+  @Bean(name = "topicListenerFactory")
+  public JmsListenerContainerFactory topicListenerFactory(
+      ConnectionFactory activeMQConnectionFactory) {
 
-        factory.setConnectionFactory(activeMQConnectionFactory);
+    DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
 
-        factory.setPubSubDomain(true);
+    factory.setConnectionFactory(activeMQConnectionFactory);
 
-        //"true" for the Publish/Subscribe domain
+    factory.setPubSubDomain(true);
 
-        factory.setSubscriptionDurable(true);
+    //"true" for the Publish/Subscribe domain
 
-        // Set this to "true" to register a durable subscription,
+    factory.setSubscriptionDurable(true);
 
-        factory.setClientId("A");
+    // Set this to "true" to register a durable subscription,
 
-        return factory;
+    factory.setClientId("A");
 
-    }
+    return factory;
 
-    @Bean
-    public JmsMessagingTemplate jmsMessagingTemplate(ConnectionFactory activeMQConnectionFactory) {
-        return new JmsMessagingTemplate(activeMQConnectionFactory);
-    }
+  }
 
-    private static final String VIRTUAL_TOPIC_NAME = "VirtualTopic.Orders";
+  @Bean
+  public JmsMessagingTemplate jmsMessagingTemplate(ConnectionFactory activeMQConnectionFactory) {
+    return new JmsMessagingTemplate(activeMQConnectionFactory);
+  }
 
-    @Bean("virtualTopicQueue")
-    public ActiveMQTopic virtualTopicQueue() {
+  private static final String VIRTUAL_TOPIC_NAME = "VirtualTopic.Orders";
 
-        return new ActiveMQTopic(VIRTUAL_TOPIC_NAME);
+  @Bean("virtualTopicQueue")
+  public ActiveMQTopic virtualTopicQueue() {
 
-    }
+    return new ActiveMQTopic(VIRTUAL_TOPIC_NAME);
+
+  }
 }

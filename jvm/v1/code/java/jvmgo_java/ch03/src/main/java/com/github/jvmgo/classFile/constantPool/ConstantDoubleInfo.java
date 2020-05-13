@@ -8,20 +8,20 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class ConstantDoubleInfo implements ConstantInfo {
 
-    private Double value;
+  private Double value;
 
-    public ConstantDoubleInfo(ClassReader reader) {
-        value = reader.next2U4Double(); //u4
-    }
+  public ConstantDoubleInfo(ClassReader reader) {
+    value = reader.next2U4Double(); //u4
+  }
 
-    @Override
-    public String getValue() {
-        return value + "";
-    }
+  @Override
+  public String getValue() {
+    return value + "";
+  }
 
-    @Override
-    public String toString() {
-        return "Double:" + value;
-    }
+  @Override
+  public String toString() {
+    return "Double:" + value;
+  }
 
 }

@@ -15,32 +15,33 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 public class ThreadConfig implements AsyncConfigurer {
 
-    @Bean(value = "taskExecutor")
-    public ThreadPoolTaskExecutor getAsyncExcutor() {
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(10);
-        executor.setMaxPoolSize(20);
-        executor.setQueueCapacity(200);
-        executor.setKeepAliveSeconds(60);
-        executor.setThreadNamePrefix("taskExecutor-");
-        executor.setAwaitTerminationSeconds(10);
-        executor.setWaitForTasksToCompleteOnShutdown(true);
-        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-        return executor;
-    }
+  @Bean(value = "taskExecutor")
+  public ThreadPoolTaskExecutor getAsyncExcutor() {
+    ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+    executor.setCorePoolSize(10);
+    executor.setMaxPoolSize(20);
+    executor.setQueueCapacity(200);
+    executor.setKeepAliveSeconds(60);
+    executor.setThreadNamePrefix("taskExecutor-");
+    executor.setAwaitTerminationSeconds(10);
+    executor.setWaitForTasksToCompleteOnShutdown(true);
+    executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+    return executor;
+  }
+
+  @Override
+  public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
+    return new MyAsyncExcHandler();
+  }
+
+  class MyAsyncExcHandler implements AsyncUncaughtExceptionHandler {
 
     @Override
-    public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
-        return new MyAsyncExcHandler();
+    public void handleUncaughtException(Throwable throwable, Method method, Object... objects) {
+      System.out.println(throwable.getMessage());
+      System.out.println(method.getName());
+      System.out.println(objects);
     }
-
-    class MyAsyncExcHandler implements AsyncUncaughtExceptionHandler {
-        @Override
-        public void handleUncaughtException(Throwable throwable, Method method, Object... objects) {
-            System.out.println(throwable.getMessage());
-            System.out.println(method.getName());
-            System.out.println(objects);
-        }
-    }
+  }
 
 }

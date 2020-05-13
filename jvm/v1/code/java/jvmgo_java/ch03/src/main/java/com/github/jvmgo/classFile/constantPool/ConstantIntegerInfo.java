@@ -8,20 +8,20 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class ConstantIntegerInfo implements ConstantInfo {
 
-    private Integer value;
+  private Integer value;
 
-    public ConstantIntegerInfo(ClassReader reader) {
-        value = reader.nextU4ToInt(); //u4
-    }
+  public ConstantIntegerInfo(ClassReader reader) {
+    value = reader.nextU4ToInt(); //u4
+  }
 
-    @Override
-    public String getValue() {
-        return value + "";
-    }
+  @Override
+  public String getValue() {
+    return value + "";
+  }
 
-    @Override
-    public String toString() {
-        return "Integer: " + value;
-    }
+  @Override
+  public String toString() {
+    return "Integer: " + value;
+  }
 
 }

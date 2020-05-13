@@ -1,0 +1,7 @@
+sentinel  商用名称阿里云 AHAS
+服务高可用 主要用于限流,服务治理之类
+sentinel管理平台步骤
+1.需要一个jar包 sentinel-dashboard-1.7.2.jar  后台启动
+2.代码中进行@Aspect 注解
+3.还是看文档吧...
+

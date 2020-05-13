@@ -17,32 +17,35 @@ import org.springframework.web.client.RestTemplate;
 /**
  * https://mp.weixin.qq.com/s/Czn0E5dl2qVKqkLG27OVfg
  */
-public class HttpComponentsClientHttpRequestFactoryDigestAuth extends HttpComponentsClientHttpRequestFactory {
-    RestTemplate restTemplate;
-    HttpHost host;
+public class HttpComponentsClientHttpRequestFactoryDigestAuth extends
+    HttpComponentsClientHttpRequestFactory {
 
-    @Test
-    public  void main(String[] args) {
-        String uri ="http://localhost:8080/spring-security-rest-digest-auth/api/foos/1";
+  RestTemplate restTemplate;
+  HttpHost host;
+
+  @Test
+  public void main(String[] args) {
+    String uri = "http://localhost:8080/spring-security-rest-digest-auth/api/foos/1";
 //        ResponseEntity<Foo>entity
-    }
-    public HttpComponentsClientHttpRequestFactoryDigestAuth(HttpHost host,HttpClient httpClient) {
-        super(httpClient);
-        this.host = host;
-    }
+  }
 
-    @Override
-    protected HttpContext createHttpContext(HttpMethod httpMethod, URI uri) {
-        return createHttpContext();
-    }
+  public HttpComponentsClientHttpRequestFactoryDigestAuth(HttpHost host, HttpClient httpClient) {
+    super(httpClient);
+    this.host = host;
+  }
 
-    private HttpContext createHttpContext() {
-        AuthCache authCache =new BasicAuthCache();
-        DigestScheme digestScheme =new DigestScheme();
-        digestScheme.overrideParamter("realm","custom realm name");
-        authCache.put(host,digestScheme);
-        BasicHttpContext basicHttpContext =new BasicHttpContext();
-        basicHttpContext.setAttribute(ClientContext.AUTH_CACHE,authCache);
-        return basicHttpContext;
-    }
+  @Override
+  protected HttpContext createHttpContext(HttpMethod httpMethod, URI uri) {
+    return createHttpContext();
+  }
+
+  private HttpContext createHttpContext() {
+    AuthCache authCache = new BasicAuthCache();
+    DigestScheme digestScheme = new DigestScheme();
+    digestScheme.overrideParamter("realm", "custom realm name");
+    authCache.put(host, digestScheme);
+    BasicHttpContext basicHttpContext = new BasicHttpContext();
+    basicHttpContext.setAttribute(ClientContext.AUTH_CACHE, authCache);
+    return basicHttpContext;
+  }
 }

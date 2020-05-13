@@ -15,20 +15,21 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class DigestConfig {
 
-    @Bean
-    public RestTemplate restTemplate() {
-        HttpHost host = new HttpHost("localhost", 8080, "http");
-        CloseableHttpClient client = HttpClientBuilder.create().setDefaultCredentialsProvider(provider())
-                .useSystemProperties().build();
-        HttpComponentsClientHttpRequestFactory requestFactory =
-                new HttpComponentsClientHttpRequestFactoryDigestAuth(host, client);
-        return new RestTemplate(requestFactory);
-    }
+  @Bean
+  public RestTemplate restTemplate() {
+    HttpHost host = new HttpHost("localhost", 8080, "http");
+    CloseableHttpClient client = HttpClientBuilder.create()
+        .setDefaultCredentialsProvider(provider())
+        .useSystemProperties().build();
+    HttpComponentsClientHttpRequestFactory requestFactory =
+        new HttpComponentsClientHttpRequestFactoryDigestAuth(host, client);
+    return new RestTemplate(requestFactory);
+  }
 
-    private CredentialsProvider provider() {
-        CredentialsProvider provider = new BasicCredentialsProvider();
-        UsernamePasswordCredentials credentials = new UsernamePasswordCredentials("user1", "userpass");
-        provider.setCredentials(AuthScope.ANY, credentials);
-        return provider;
-    }
+  private CredentialsProvider provider() {
+    CredentialsProvider provider = new BasicCredentialsProvider();
+    UsernamePasswordCredentials credentials = new UsernamePasswordCredentials("user1", "userpass");
+    provider.setCredentials(AuthScope.ANY, credentials);
+    return provider;
+  }
 }

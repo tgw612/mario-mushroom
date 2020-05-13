@@ -11,19 +11,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = HelloApplication.class)
 public class HelloApplicationTest {
-    @Autowired
-    private Sender sender;
 
-    @Test
-    public void hello() throws Exception {
-        sender.send();
-    }
+  @Autowired
+  private Sender sender;
 
-    @Before
-    public void setUp() throws Exception {
-    }
+  @Test
+  public void hello() throws Exception {
+    sender.send();
+  }
 
-    @After
-    public void tearDown() throws Exception {
-    }
+  @Before
+  public void setUp() throws Exception {
+  }
+
+  @After
+  public void tearDown() throws Exception {
+  }
 }

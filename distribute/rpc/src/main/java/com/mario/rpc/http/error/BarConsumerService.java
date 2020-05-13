@@ -6,13 +6,15 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class BarConsumerService {
-    private RestTemplate restTemplate;
 
-    public BarConsumerService(RestTemplateBuilder restTemplateBuilder){
-        RestTemplate restTemplate =restTemplateBuilder.errorHandler(new RestTemplateResponseErrorHandler()).build();
-    }
+  private RestTemplate restTemplate;
 
-    public Bar fetchBarById(String barId){
-        return restTemplate.getForObject("/bars/4242",Bar.class);
-    }
+  public BarConsumerService(RestTemplateBuilder restTemplateBuilder) {
+    RestTemplate restTemplate = restTemplateBuilder
+        .errorHandler(new RestTemplateResponseErrorHandler()).build();
+  }
+
+  public Bar fetchBarById(String barId) {
+    return restTemplate.getForObject("/bars/4242", Bar.class);
+  }
 }

@@ -8,9 +8,9 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class DeprecatedAttribute implements AttributeInfo {
 
-    @Override
-    public void readInfo(ClassReader reader) {
+  @Override
+  public void readInfo(ClassReader reader) {
 
-    }
+  }
 
 }

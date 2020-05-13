@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mairo</groupId>
-        <artifactId>mushroom</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
+  <parent>
     <groupId>com.mairo</groupId>
-    <artifactId>db</artifactId>
+    <artifactId>mushroom</artifactId>
     <version>1.0-SNAPSHOT</version>
+  </parent>
 
-    <modules>
-        <module>mongodb</module>
-        <module>mysql</module>
-    </modules>
-    
+  <groupId>com.mairo</groupId>
+  <artifactId>db</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>mongodb</module>
+    <module>mysql</module>
+  </modules>
+
 </project>

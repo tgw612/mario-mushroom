@@ -1,0 +1,38 @@
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.idea
+*.log
+/log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+/.idea/
+### VS Code ###
+.vscode/
+/log
+/log.path_IS_UNDEFINED
+*.jar
+target
+.mvn
+/.idea/

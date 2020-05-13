@@ -11,23 +11,24 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @Data
 public class BeanUtil implements ApplicationContextAware {
-    public static ApplicationContext context = null;
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        setContext(applicationContext);
+  public static ApplicationContext context = null;
+
+  @Override
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    setContext(applicationContext);
+  }
+
+  private void setContext(ApplicationContext applicationContext) {
+    context = applicationContext;
+  }
+
+  public static <T> T getBean(String name) {
+    if (context != null) {
+      return (T) context.getBean(name);
+    } else {
+      return null;
     }
 
-    private void setContext(ApplicationContext applicationContext) {
-        context = applicationContext;
-    }
-
-    public static <T> T getBean(String name) {
-        if (context != null) {
-            return (T) context.getBean(name);
-        } else {
-            return null;
-        }
-
-    }
+  }
 }

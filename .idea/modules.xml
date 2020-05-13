@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/bigdata.iml" filepath="$PROJECT_DIR$/bigdata/bigdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/cache/cache.iml" filepath="$PROJECT_DIR$/cache/cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribute/cap/cap.iml" filepath="$PROJECT_DIR$/distribute/cap/cap.iml" />
       <module fileurl="file://$PROJECT_DIR$/db/db.iml" filepath="$PROJECT_DIR$/db/db.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-pattern/design-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/design-pattern.iml" />
@@ -30,8 +31,11 @@
       <module fileurl="file://$PROJECT_DIR$/orm/orm.iml" filepath="$PROJECT_DIR$/orm/orm.iml" />
       <module fileurl="file://$PROJECT_DIR$/poi/poi.iml" filepath="$PROJECT_DIR$/poi/poi.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cache/redis/redis.iml" filepath="$PROJECT_DIR$/cache/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribute/rpc/rpc.iml" filepath="$PROJECT_DIR$/distribute/rpc/rpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sentinel/sentinel.iml" filepath="$PROJECT_DIR$/sentinel/sentinel.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/spark/spark.iml" filepath="$PROJECT_DIR$/bigdata/spark/spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/spock/spock.iml" filepath="$PROJECT_DIR$/test/spock/spock.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/storm/storm.iml" filepath="$PROJECT_DIR$/bigdata/storm/storm.iml" />
@@ -39,6 +43,7 @@
       <module fileurl="file://$PROJECT_DIR$/base/thread/thread.iml" filepath="$PROJECT_DIR$/base/thread/thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/transactional/transactional.iml" filepath="$PROJECT_DIR$/transactional/transactional.iml" />
       <module fileurl="file://$PROJECT_DIR$/workflow/workflow.iml" filepath="$PROJECT_DIR$/workflow/workflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribute/xxl-job/xxl-job.iml" filepath="$PROJECT_DIR$/distribute/xxl-job/xxl-job.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" />
     </modules>
   </component>

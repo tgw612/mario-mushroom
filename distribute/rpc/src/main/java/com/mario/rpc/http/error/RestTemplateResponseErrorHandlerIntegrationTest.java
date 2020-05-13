@@ -22,20 +22,23 @@ import org.springframework.web.client.RestTemplate;
 @ContextConfiguration(classes = {BaseException.class, Bar.class})
 @RestClientTest
 public class RestTemplateResponseErrorHandlerIntegrationTest {
-    @Autowired
-    private MockRestServiceServer server;
 
-    @Autowired
-    private RestTemplateBuilder builder;
+  @Autowired
+  private MockRestServiceServer server;
 
-    @Test(expected = BaseException.class)
-    public void giveRemoteApiCall() {
-        Assert.assertNotNull(this.builder);
-        Assert.assertNotNull(this.builder);
-        RestTemplate restTemplate = this.builder.errorHandler(new RestTemplateResponseErrorHandler()).build();
-        this.server.expect(ExpectedCount.once(), requestTo("/bars/4242")).andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.NOT_FOUND));
-        Bar response = restTemplate.getForObject("/bars/4242", Bar.class);
-        this.server.verify();
-    }
+  @Autowired
+  private RestTemplateBuilder builder;
+
+  @Test(expected = BaseException.class)
+  public void giveRemoteApiCall() {
+    Assert.assertNotNull(this.builder);
+    Assert.assertNotNull(this.builder);
+    RestTemplate restTemplate = this.builder.errorHandler(new RestTemplateResponseErrorHandler())
+        .build();
+    this.server.expect(ExpectedCount.once(), requestTo("/bars/4242"))
+        .andExpect(method(HttpMethod.GET))
+        .andRespond(withStatus(HttpStatus.NOT_FOUND));
+    Bar response = restTemplate.getForObject("/bars/4242", Bar.class);
+    this.server.verify();
+  }
 }

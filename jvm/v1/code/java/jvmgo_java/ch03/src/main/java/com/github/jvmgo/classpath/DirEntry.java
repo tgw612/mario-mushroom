@@ -7,15 +7,15 @@ import java.nio.file.Paths;
 
 class DirEntry implements Entry {
 
-    private Path absPath;
+  private Path absPath;
 
-    DirEntry(String path) {
-        absPath = Paths.get(path).toAbsolutePath();
-    }
+  DirEntry(String path) {
+    absPath = Paths.get(path).toAbsolutePath();
+  }
 
-    @Override
-    public byte[] readClass(String className) throws IOException {
-        return Files.readAllBytes(absPath.resolve(className));
-    }
+  @Override
+  public byte[] readClass(String className) throws IOException {
+    return Files.readAllBytes(absPath.resolve(className));
+  }
 
 }

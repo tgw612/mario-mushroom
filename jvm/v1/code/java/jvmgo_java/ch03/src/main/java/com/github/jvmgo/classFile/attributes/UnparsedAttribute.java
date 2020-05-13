@@ -8,18 +8,18 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class UnparsedAttribute implements AttributeInfo {
 
-    private String name;
-    private int length;
-    private byte[] info;
+  private String name;
+  private int length;
+  private byte[] info;
 
-    public UnparsedAttribute(String name, int length) {
-        this.name = name;
-        this.length = length;
-    }
+  public UnparsedAttribute(String name, int length) {
+    this.name = name;
+    this.length = length;
+  }
 
-    @Override
-    public void readInfo(ClassReader reader) {
-        info = reader.nextBytes(length);
-    }
+  @Override
+  public void readInfo(ClassReader reader) {
+    info = reader.nextBytes(length);
+  }
 
 }

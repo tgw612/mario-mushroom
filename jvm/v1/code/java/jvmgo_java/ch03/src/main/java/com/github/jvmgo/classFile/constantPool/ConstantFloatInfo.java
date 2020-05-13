@@ -8,20 +8,20 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class ConstantFloatInfo implements ConstantInfo {
 
-    private float value;
+  private float value;
 
-    public ConstantFloatInfo(ClassReader reader) {
-        value = reader.nextU4ToFloat();//u4
-    }
+  public ConstantFloatInfo(ClassReader reader) {
+    value = reader.nextU4ToFloat();//u4
+  }
 
-    @Override
-    public String getValue() {
-        return value + "";
-    }
+  @Override
+  public String getValue() {
+    return value + "";
+  }
 
-    @Override
-    public String toString() {
-        return "Float: " + value;
-    }
+  @Override
+  public String toString() {
+    return "Float: " + value;
+  }
 
 }

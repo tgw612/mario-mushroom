@@ -7,12 +7,13 @@ import javax.annotation.Resource;
 
 @Service
 public class MessageProducerServiceImpl implements IMessageProducerService {
-    @Resource
-    private KafkaTemplate<String, String> kafkaTemplate;
+
+  @Resource
+  private KafkaTemplate<String, String> kafkaTemplate;
 
 
-    @Override
-    public void sendMessage(String msg) {
-        this.kafkaTemplate.sendDefault("study-key", msg);
-    }
+  @Override
+  public void sendMessage(String msg) {
+    this.kafkaTemplate.sendDefault("study-key", msg);
+  }
 }

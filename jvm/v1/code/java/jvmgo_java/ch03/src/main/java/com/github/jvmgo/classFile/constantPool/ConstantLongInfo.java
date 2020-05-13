@@ -8,20 +8,20 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class ConstantLongInfo implements ConstantInfo {
 
-    private long value;
+  private long value;
 
-    public ConstantLongInfo(ClassReader reader) {
-        value = reader.next2U4ToLong(); //u4
-    }
+  public ConstantLongInfo(ClassReader reader) {
+    value = reader.next2U4ToLong(); //u4
+  }
 
-    @Override
-    public String getValue() {
-        return value + "";
-    }
+  @Override
+  public String getValue() {
+    return value + "";
+  }
 
-    @Override
-    public String toString() {
-        return "Long: " + value;
-    }
+  @Override
+  public String toString() {
+    return "Long: " + value;
+  }
 
 }

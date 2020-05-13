@@ -8,11 +8,11 @@ import com.github.jvmgo.classfile.ClassReader;
  */
 public class ExceptionsAttribute implements AttributeInfo {
 
-    private int[] exceptionIndexTable;
+  private int[] exceptionIndexTable;
 
-    @Override
-    public void readInfo(ClassReader reader) {
-        exceptionIndexTable = reader.nextUint16s();
-    }
+  @Override
+  public void readInfo(ClassReader reader) {
+    exceptionIndexTable = reader.nextUint16s();
+  }
 
 }

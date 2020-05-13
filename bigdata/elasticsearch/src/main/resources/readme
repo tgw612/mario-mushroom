@@ -9,14 +9,21 @@ useradd elssearch -g elssearch -p elssearch
 (4)切换到 elssearch用户。切换到新创建的用户 elssearch，命令如下:
 su elssearch
 
-
-
-
-
 elk
 ./logstash -f logstash.conf
 
-
-
 服务器性能监控系统
 Metricbeat
+
+docker 启动 kibana
+docker run -it -d -e ELASTICSEARCH_URL=ip:port
+ -e ELASTICSEARCH_PASSWORD=password -e ELASTICSEARCH_USERNAME=username  --name kibana_7.4 kibana:7.4.0
+ 编辑kibana配置
+ docker exec -it containerId /bin/bash
+server:
+  name: kibana
+  host: localhost
+elasticsearch:
+  hosts: http://es-cn-0pp1jyb600014xqtz.elasticsearch.aliyuncs.com:9200
+  username:elastic
+  password:Hfgj2020

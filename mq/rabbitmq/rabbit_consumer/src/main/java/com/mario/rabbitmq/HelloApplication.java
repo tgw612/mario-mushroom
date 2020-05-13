@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableRabbit
 public class HelloApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(HelloApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(HelloApplication.class, args);
+  }
 
 }
