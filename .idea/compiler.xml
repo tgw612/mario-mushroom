@@ -19,15 +19,17 @@
         <module name="distribute" />
         <module name="cap" />
         <module name="rocketmq" />
+        <module name="sharding" />
         <module name="kafka" />
         <module name="activemq" />
         <module name="hbase" />
         <module name="security" />
         <module name="transactional" />
+        <module name="hive" />
         <module name="orika" />
         <module name="db" />
         <module name="hadoop" />
-        <module name="hive" />
+        <module name="web" />
         <module name="netty" />
         <module name="spark" />
         <module name="xxl-job" />
@@ -35,13 +37,15 @@
         <module name="thread" />
         <module name="poi" />
         <module name="base" />
+        <module name="jvm" />
+        <module name="mybatis" />
         <module name="redis" />
         <module name="mongodb" />
         <module name="cache" />
         <module name="docker" />
         <module name="workflow" />
         <module name="storm" />
-        <module name="jvm" />
+        <module name="apollo" />
         <module name="flume" />
         <module name="design-pattern" />
         <module name="mysql" />
@@ -52,6 +56,7 @@
       <module name="akka" target="1.8" />
       <module name="algorithm" target="1.8" />
       <module name="aop" target="1.8" />
+      <module name="apollo" target="1.8" />
       <module name="base" target="1.8" />
       <module name="bigdata" target="1.8" />
       <module name="cache" target="1.8" />
@@ -109,6 +114,7 @@
       <module name="test" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
+      <module name="web" target="1.8" />
       <module name="workflow" target="1.8" />
       <module name="xxl-job" target="1.8" />
       <module name="zookeeper" target="1.8" />
@@ -119,6 +125,7 @@
       <module name="activemq" options="-parameters" />
       <module name="algorithm" options="-parameters" />
       <module name="aop" options="-parameters" />
+      <module name="apollo" options="-parameters" />
       <module name="base" options="-parameters" />
       <module name="cache" options="-parameters" />
       <module name="cap" options="-parameters" />
@@ -164,6 +171,7 @@
       <module name="storm" options="-parameters" />
       <module name="thread" options="-parameters" />
       <module name="transactional" options="-parameters" />
+      <module name="web" options="-parameters" />
       <module name="workflow" options="-parameters" />
       <module name="xxl-job" options="-parameters" />
       <module name="zookeeper" options="-parameters" />

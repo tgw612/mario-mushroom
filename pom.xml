@@ -27,6 +27,8 @@
     <module>test</module>
     <module>bigdata</module>
     <module>mq</module>
+    <module>apollo</module>
+    <module>web</module>
     <!--<module>memcache</module>-->
     <!--<module>easypoi</module>-->
     <!--<module>dubbo</module>-->
@@ -42,12 +44,15 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.0.1.RELEASE</version>
   </parent>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.version>0.0.1</project.version>
     <springboot.version>2.0.1.RELEASE</springboot.version>
   </properties>
+
+
   <dependencyManagement>
     <dependencies>
       <dependency>

@@ -11,12 +11,42 @@
 
   <artifactId>sharding</artifactId>
 
+  <properties>
+    <shardingsphere.version>4.0.0</shardingsphere.version>
+  </properties>
 
   <dependencies>
+    <!-- for spring boot -->
     <dependency>
-      <groupId>io.shardingsphere</groupId>
-      <artifactId>sharding-jdbc-core</artifactId>
-      <version>3.0.0</version>
+      <groupId>org.apache.shardingsphere</groupId>
+      <artifactId>shardingsphere-jdbc-spring-boot-starter</artifactId>
+      <version>${shardingsphere.version}</version>
     </dependency>
+    <!-- for spring namespace -->
+    <dependency>
+      <groupId>org.apache.shardingsphere</groupId>
+      <artifactId>shardingsphere-jdbc-spring-namespace</artifactId>
+      <version>${shardingsphere.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.shardingsphere</groupId>
+      <artifactId>shardingsphere-jdbc-spring-boot-starter</artifactId>
+      <version>${shardingsphere.version}</version>
+    </dependency>
+
+    <!-- 使用XA事务时，需要引入此模块 -->
+    <dependency>
+      <groupId>org.apache.shardingsphere</groupId>
+      <artifactId>shardingsphere-transaction-xa-core</artifactId>
+      <version>${shardingsphere.version}</version>
+    </dependency>
+
+    <!-- 使用BASE事务时，需要引入此模块 -->
+    <dependency>
+      <groupId>org.apache.shardingsphere</groupId>
+      <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
+      <version>${shardingsphere.version}</version>
+    </dependency
   </dependencies>
+  >
 </project>

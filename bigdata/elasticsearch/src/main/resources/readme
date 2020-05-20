@@ -27,3 +27,7 @@ elasticsearch:
   hosts: ip:port
   username:username
   password:password
+
+
+es的数据类型
+https://blog.csdn.net/kris1025/article/details/81279339
