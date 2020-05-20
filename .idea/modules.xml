@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mq/activemq/activemq.iml" filepath="$PROJECT_DIR$/mq/activemq/activemq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apollo/apollo.iml" filepath="$PROJECT_DIR$/apollo/apollo.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/bigdata.iml" filepath="$PROJECT_DIR$/bigdata/bigdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/cache/cache.iml" filepath="$PROJECT_DIR$/cache/cache.iml" />
@@ -26,27 +25,23 @@
       <module fileurl="file://$PROJECT_DIR$/db/mongodb/mongodb.iml" filepath="$PROJECT_DIR$/db/mongodb/mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/mq.iml" filepath="$PROJECT_DIR$/mq/mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/mushroom.iml" filepath="$PROJECT_DIR$/mushroom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/orm/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/orm/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/db/mysql/mysql.iml" filepath="$PROJECT_DIR$/db/mysql/mysql.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
-      <module fileurl="file://$PROJECT_DIR$/orika/orika.iml" filepath="$PROJECT_DIR$/orika/orika.iml" />
-      <module fileurl="file://$PROJECT_DIR$/orm/orm.iml" filepath="$PROJECT_DIR$/orm/orm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/poi/poi.iml" filepath="$PROJECT_DIR$/poi/poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/orika/orika.iml" filepath="$PROJECT_DIR$/util/orika/orika.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/poi/poi.iml" filepath="$PROJECT_DIR$/util/poi/poi.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/cache/redis/redis.iml" filepath="$PROJECT_DIR$/cache/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/mq/rocketmq/rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/distribute/rpc/rpc.iml" filepath="$PROJECT_DIR$/distribute/rpc/rpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sentinel/sentinel.iml" filepath="$PROJECT_DIR$/sentinel/sentinel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/orm/sharding/sharding.iml" filepath="$PROJECT_DIR$/orm/sharding/sharding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/sentinel/sentinel.iml" filepath="$PROJECT_DIR$/util/sentinel/sentinel.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/spark/spark.iml" filepath="$PROJECT_DIR$/bigdata/spark/spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/spock/spock.iml" filepath="$PROJECT_DIR$/test/spock/spock.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/storm/storm.iml" filepath="$PROJECT_DIR$/bigdata/storm/storm.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/thread/thread.iml" filepath="$PROJECT_DIR$/base/thread/thread.iml" />
-      <module fileurl="file://$PROJECT_DIR$/transactional/transactional.iml" filepath="$PROJECT_DIR$/transactional/transactional.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/workflow/workflow.iml" filepath="$PROJECT_DIR$/workflow/workflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/workflow/workflow.iml" filepath="$PROJECT_DIR$/util/workflow/workflow.iml" />
       <module fileurl="file://$PROJECT_DIR$/distribute/xxl-job/xxl-job.iml" filepath="$PROJECT_DIR$/distribute/xxl-job/xxl-job.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/bigdata/zookeeper/zookeeper.iml" />
     </modules>

@@ -1,4 +1,4 @@
-package com.yizhitong.product.center.common.util;
+package com.mario.redis;
 
 
 import java.util.concurrent.TimeUnit;

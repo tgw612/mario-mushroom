@@ -3,3 +3,11 @@
 jetcache
 redisson
 lettuce
+
+
+REDIS 5.0
+全新数据类型streams
+lolwut
+lua改进
+动态hz
+support docker

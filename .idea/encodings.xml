@@ -11,6 +11,9 @@
     <file url="file://$PROJECT_DIR$/base/maven" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base/spring" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base/thread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base/transactional" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base/transactional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base/web/filter-listener-interceptor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bigdata" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bigdata/elasticsearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bigdata/elasticsearch/src/main/java" charset="UTF-8" />
@@ -31,6 +34,11 @@
     <file url="file://$PROJECT_DIR$/db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/mongodb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/mysql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/orm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/orm/mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/orm/mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/orm/sharding" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/orm/sharding/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-pattern" charset="UTF-8" />
@@ -60,23 +68,15 @@
     <file url="file://$PROJECT_DIR$/mq/rocketmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orika" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orika/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orm" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orm/mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orm/mybatis/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orm/sharding" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/orm/sharding/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/poi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/jmockit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/jmockit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/spock" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/transactional" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/transactional/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/filter-listener-interceptor" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/workflow" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/orika" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/orika/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/poi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/util/workflow" charset="UTF-8" />
   </component>
 </project>

@@ -11,42 +11,37 @@
         <module name="idea" />
         <module name="flink" />
         <module name="demo" />
+        <module name="xxl-job" />
         <module name="elasticsearch" />
         <module name="jmockit" />
         <module name="sentinel" />
-        <module name="mq" />
         <module name="spock" />
         <module name="distribute" />
         <module name="cap" />
         <module name="rocketmq" />
-        <module name="sharding" />
         <module name="kafka" />
         <module name="activemq" />
-        <module name="hbase" />
+        <module name="netty" />
         <module name="security" />
-        <module name="transactional" />
-        <module name="hive" />
+        <module name="mongodb" />
+        <module name="hbase" />
+        <module name="util" />
         <module name="orika" />
         <module name="db" />
         <module name="hadoop" />
-        <module name="web" />
-        <module name="netty" />
+        <module name="flume" />
         <module name="spark" />
-        <module name="xxl-job" />
-        <module name="orm" />
+        <module name="hive" />
         <module name="thread" />
         <module name="poi" />
         <module name="base" />
-        <module name="jvm" />
-        <module name="mybatis" />
         <module name="redis" />
-        <module name="mongodb" />
+        <module name="mq" />
         <module name="cache" />
         <module name="docker" />
         <module name="workflow" />
         <module name="storm" />
-        <module name="apollo" />
-        <module name="flume" />
+        <module name="jvm" />
         <module name="design-pattern" />
         <module name="mysql" />
       </profile>
@@ -114,6 +109,7 @@
       <module name="test" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="transactional" target="1.8" />
+      <module name="util" target="1.8" />
       <module name="web" target="1.8" />
       <module name="workflow" target="1.8" />
       <module name="xxl-job" target="1.8" />
@@ -171,6 +167,7 @@
       <module name="storm" options="-parameters" />
       <module name="thread" options="-parameters" />
       <module name="transactional" options="-parameters" />
+      <module name="util" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="workflow" options="-parameters" />
       <module name="xxl-job" options="-parameters" />
