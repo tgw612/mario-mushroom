@@ -6,16 +6,13 @@
 
     <parent>
         <groupId>com.mairo</groupId>
-        <artifactId>mushroom</artifactId>
+        <artifactId>base</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.mairo</groupId>
-    <artifactId>web</artifactId>
+    <artifactId>exception</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>exception</module>
-        <module>filter-listener-interceptor</module>
-    </modules>
+
 </project>

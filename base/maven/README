@@ -1,0 +1,10 @@
+docker搭建maven私有仓库
+https://www.jianshu.com/p/09a6cab3785a
+
+
+docker run -d --name=nexus3 --restart=always -p 8081:8081 -v /Users/tgw/nexus3/nexus-data:/var/nexus-data 8d5e65ad51ca
+
+docker exec -it 511d6878bca5 /bin/bash
+获取登陆密码
+cd nexus-data/
+cat admin.password

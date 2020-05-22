@@ -4,16 +4,13 @@ import com.mario.es.domain.City;
 import com.mario.es.repository.CityRepository;
 import com.mario.es.service.CityService;
 import java.util.List;
-import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
-import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
@@ -31,7 +28,7 @@ public class CityESServiceImpl implements CityService {
   // 分页参数 -> TODO 代码可迁移到具体项目的公共 common 模块
   private static final Integer pageNumber = 0;
   private static final Integer pageSize = 10;
-  Pageable pageable = new PageRequest(pageNumber, pageSize);
+  Pageable pageable = PageRequest.of(pageNumber, pageSize, Sort.by("id"));
 
   // ES 操作类
   @Autowired
@@ -107,19 +104,21 @@ public class CityESServiceImpl implements CityService {
     //   - 字段对应权重分设置，可以优化成 enum
     //   - 由于无相关性的分值默认为 1 ，设置权重分最小值为 10
     ;
-    FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery()
-        .add(QueryBuilders.matchPhraseQuery("name", searchContent),
-            ScoreFunctionBuilders.weightFactorFunction(1000))
-        .add(QueryBuilders.matchPhraseQuery("description", searchContent),
-            ScoreFunctionBuilders.weightFactorFunction(500))
-        .scoreMode(SCORE_MODE_SUM).setMinScore(MIN_SCORE);
-    // 分页参数
-    Pageable pageable = new PageRequest(pageNumber, pageSize);
+//    QueryBuilder querys = QueryBuilders.boolQuery().must(queryStartDate).must(queryEndDate);
+//
+//    FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery(querys)
+//        .add(QueryBuilders.matchPhraseQuery("name", searchContent),
+//            ScoreFunctionBuilders.weightFactorFunction(1000))
+//        .add(QueryBuilders.matchPhraseQuery("description", searchContent),
+//            ScoreFunctionBuilders.weightFactorFunction(500))
+//        .scoreMode(SCORE_MODE_SUM).setMinScore(MIN_SCORE);
+//    // 分页参数
+//    Pageable pageable = new PageRequest(pageNumber, pageSize, Sort.by("id"));
 
     // 创建搜索 DSL 查询
     SearchQuery searchQuery = new NativeSearchQueryBuilder()
-        .withPageable(pageable)
-        .withQuery(functionScoreQueryBuilder).build();
+        .withPageable(pageable).build();
+//        .withQuery(functionScoreQueryBuilder).build();
 
     LOGGER.info("\n searchCity(): searchContent [" + searchContent + "] \n DSL  = \n " + searchQuery
         .getQuery().toString());

@@ -16,6 +16,7 @@
 
   <modules>
     <!--<module>spi</module>-->
+
     <!--<module>websocket</module>-->
     <!--<module>serializable</module>-->
     <!--<module>http</module>-->

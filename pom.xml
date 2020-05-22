@@ -23,18 +23,15 @@
     <module>test</module>
     <module>bigdata</module>
     <module>mq</module>
-
     <!--<module>memcache</module>-->
     <!--<module>easypoi</module>-->
     <!--<module>dubbo</module>-->
     <!--<module>zookeeper</module>-->
-
-
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.1.RELEASE</version>
+    <version>${springboot.version}</version>
   </parent>
 
   <properties>
@@ -47,11 +44,11 @@
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-webflux</artifactId>
-        <version>${springboot.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-webflux</artifactId>-->
+<!--        <version>${springboot.version}</version>-->
+<!--      </dependency>-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
