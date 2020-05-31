@@ -1,18 +1,15 @@
 docker搭建maven私有仓库
 https://www.jianshu.com/p/09a6cab3785a
 
-docker 安装
-docker pull sonatype/nexus3:latest
 
-docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rich@678 mysql:latest
+搭建maven私有仓库
+https://www.jianshu.com/p/09a6cab3785a
 docker run -d -p 8081:8081 --name nexus -v /root/nexus-data:/var/nexus-data --restart=always sonatype/nexus3
-docker run --name redis -p 6379:6379 -d redis
-docker run --name zookeeper --restart always -d zookeeper
+    docker exec -it 511d6878bca5 /bin/bash
+    获取登陆密码
+    cd nexus-data/
+    cat admin.password 登录后可以自定义修改密码
 
-docker run -d --name=nexus3 --restart=always -p 8081:8081 -v /Users/tgw/nexus3/nexus-data:/var/nexus-data 8d5e65ad51ca
 
-docker run -d --name=nexus3 --restart=always -p 8081:8081 -d nexus3:lastst
-docker exec -it 511d6878bca5 /bin/bash
-获取登陆密码
-cd nexus-data/
-cat admin.password
+
+
