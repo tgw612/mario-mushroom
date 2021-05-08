@@ -8,7 +8,7 @@ https://blog.csdn.net/a910626/article/category/1255980
 简书
 OOM异常 https://www.jianshu.com/p/2fdee831ed03
 
-JVM执行程序的过程 ： 
+JVM执行程序的过程： 
 I.加载class文件 
 II.管理并分配内存 
 III.执行垃圾收集 
@@ -18,7 +18,7 @@ III.执行垃圾收集
 
 内存分区
 线程共有:
-1.堆,
+1.堆:
 2.方法区: 是各个线程共享的内存区域，它用于存放已经被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。
 它有一个别名NonHeap（非堆），目的应该是与java堆区分开来。方法区的大小决定了系统可以保存多少个类。
 线程私有:
@@ -128,3 +128,15 @@ G1是一款面向服务端应用的垃圾收集器。G1具备如下特点：
 初始标记阶段仅仅只是标记一下GC Roots能直接关联到的对象，并且修改TAMS的值，让下一个阶段用户程序并发运行时，能在正确可用的Region中创建新对象，这一阶段需要停顿线程，但是耗时很短，
 并发标记阶段是从GC Root开始对堆中对象进行可达性分析，找出存活的对象，这阶段时耗时较长，但可与用户程序并发执行。
 最终标记阶段则是为了修正在并发标记期间因用户程序继续运作而导致标记产生变动的那一部分标记记录，虚拟机将这段时间对象变化记录在线程Remenbered Set Logs里面，最终标记阶段需要把Remembered Set Logs的数据合并到Remembered Set Logs里面，最终标记阶段需要把Remembered Set Logs的数据合并到Remembered Set中，这一阶段需要停顿线程，但是可并行执行。
+
+jprofile使用
+https://www.kuangstudy.com/bbs/1369899213336367105
+
+亮点介绍GraalVM
+
+
+查看docker容器内jar 运行信息 jstack
+1.进入容器内/bin/bash docker exec 976 -it /bin/bash
+2.进入/usr/bin
+3.查看容器内pid docker container top redis
+4.jstack -l pid

@@ -15,9 +15,15 @@ elk
 服务器性能监控系统
 Metricbeat
 
+
+
+
+docker 启动es
+docker run -it -p 9200:9200 -p 9300:9300 -p 5601:5601 --name es -d -e "discovery.type=single-node" elasticsearch:7.5.1
+
 docker 启动 kibana
 docker run -it -d -e ELASTICSEARCH_URL=ip:port
- -e ELASTICSEARCH_PASSWORD=password -e ELASTICSEARCH_USERNAME=username  --name kibana_7.4 kibana:7.4.0
+ -e ELASTICSEARCH_PASSWORD=password -e ELASTICSEARCH_USERNAME=username --name kibana_7.4 kibana:7.4.0
  编辑kibana配置
  docker exec -it containerId /bin/bash
 server:

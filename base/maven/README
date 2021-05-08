@@ -1,10 +1,8 @@
-docker搭建maven私有仓库
-https://www.jianshu.com/p/09a6cab3785a
-
-
 搭建maven私有仓库
 https://www.jianshu.com/p/09a6cab3785a
 docker run -d -p 8081:8081 --name nexus -v /root/nexus-data:/var/nexus-data --restart=always sonatype/nexus3
+docker run -d -p 8081:8081 --name nexus -v /root/nexus-data:/var/nexus-data  sonatype/nexus3
+docker run -d -p 8081:8081 --name nexus -v /Users/Shared/volume/nexus-data:/var/nexus-data  sonatype/nexus3
     docker exec -it 511d6878bca5 /bin/bash
     获取登陆密码
     cd nexus-data/
@@ -12,4 +10,4 @@ docker run -d -p 8081:8081 --name nexus -v /root/nexus-data:/var/nexus-data --re
 
 
 
-
+注意<startClass>
